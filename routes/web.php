@@ -1,26 +1,26 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+//Rutas para el inicio
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/index', function () {
-    return view('index');
+    return view('inicio');
 });
 Route::get('/inicio', function() {
     return view('inicio');
 });
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Todas las rutas de las categorias:(
+Route::get('/escritura','categoriasController@indexForEscrituraWinideas');
+Route::get('/bolsas-maletas-textiles','categoriasController@indexForBolsasWinideas');
+Route::get('/hogar','categoriasController@indexForHogarWinideas');
+Route::get('/kids','categoriasController@indexForKidsWinideas');
+Route::get('/llaveros-linternas-herramientas','categoriasController@indexForLinternasWinideas');
+Route::get('/oficina','categoriasController@indexForOficinaWinideas');
+Route::get('/salud-belleza','categoriasController@indexForSaludWinideas');
+Route::get('/sublimacion','categoriasController@indexForSublimacionWinideas');
+Route::get('/tazas-termos-cilindros','categoriasController@indexForTazasWinideas');
+Route::get('/tecnologia','categoriasController@indexForTecnologiaWinideas');
+Route::get('/viaje-recreacion','categoriasController@indexForViajeWinideas');

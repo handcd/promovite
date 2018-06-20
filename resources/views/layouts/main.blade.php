@@ -16,12 +16,15 @@
     .navbar.bg-light {
       background-image: linear-gradient(white, #eee 50%, #e4e4e4); 
       background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      z-index: 200;
     }
     .footer{
       background-image: linear-gradient(white, #eee 50%, #a59f9f); 
       background-repeat: no-repeat;
       position: fixed;
-      height: 50px;
+      height: 80px;
       bottom: 0;
       width: 100%;
     }
@@ -34,10 +37,10 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-liht bg-light">
+    <nav class="navbar navbar-expand-lg navbar-liht bg-light">
     <a class="navbar-brand" href="#"><img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor03" aria-label="Button group with nested dropdown">
@@ -48,17 +51,17 @@
         <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Categorias</a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                  <li><a href="#">Escritura</a></li>
-                  <li><a href="#">Oficina</a></li>
-                  <li><a href="#">Kids</a></li>
-                  <li><a href="#">Tecnología</a></li>
-                  <li><a href="#">Llaveros, linternas y herrámientas</a></li>
-                  <li><a href="#">Salud y belleza</a></li>
-                  <li><a href="#">Bolsas, maletas y textiles</a></li>
-                  <li><a href="#">Tazas, termos y cilindros</a></li>
-                  <li><a href="#">Hogar y estilo de vida</a></li>
-                  <li><a href="#">Sublimación</a></li>
-                  <li><a href="#">Viaje y recreación</a></li>
+                  <li><a href="{{ url('/escritura') }}">Escritura</a></li>
+                  <li><a href="{{ url('/oficina') }}">Oficina</a></li>
+                  <li><a href="{{ url('/kids') }}">Kids</a></li>
+                  <li><a href="{{ url('/tecnologia') }}">Tecnología</a></li>
+                  <li><a href="{{ url('/llaveros-linternas-herramientas') }}">Llaveros, linternas y herrámientas</a></li>
+                  <li><a href="{{ url('/salud-belleza') }}">Salud y belleza</a></li>
+                  <li><a href="{{ url('/bolsas-maletas-textiles') }}">Bolsas, maletas y textiles</a></li>
+                  <li><a href="{{ url('/tazas-termos-cilindros') }}">Tazas, termos y cilindros</a></li>
+                  <li><a href="{{ url('/hogar') }}">Hogar y estilo de vida</a></li>
+                  <li><a href="{{ url('/sublimacion') }}">Sublimación</a></li>
+                  <li><a href="{{ url('/viaje-recreacion') }}">Viaje y recreación</a></li>
                   <li><a href="#">Outlet</a></li>
               </ul>
         </li>
@@ -96,6 +99,7 @@
   <div class="footer">
       <div class="col-md-12 text-center">
         <div class="credits">
+        <br>
           &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.
          </div>
       </div>
