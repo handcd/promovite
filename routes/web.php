@@ -24,3 +24,6 @@ Route::get('/sublimacion','categoriasController@indexForSublimacionWinideas');
 Route::get('/tazas-termos-cilindros','categoriasController@indexForTazasWinideas');
 Route::get('/tecnologia','categoriasController@indexForTecnologiaWinideas');
 Route::get('/viaje-recreacion','categoriasController@indexForViajeWinideas');
+//Route::get('/untitled','categoriasController@indexForEscrituraWinideas');
+//Rutas para mostrar articulos
+Route::get('/escritura/{id}', 'showController@showEscritura');

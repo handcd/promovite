@@ -1,0 +1,147 @@
+/* Estilo para bolitas de colores */
+
+    .blanco:before {
+    	color: white;
+    	background-color: black;
+    }
+    .plata:before {
+        color:  #C0C0C0;
+    }
+    .negro:before {
+        color: black;
+    }
+    .azul:before {
+        color: blue;
+    }
+    .rojo:before {
+        color: red;
+    }
+    .verde:before {
+        color: green;   
+    }
+    .amarillo:before {
+        color: yellow;
+    }
+    .naranja:before {
+        color: orange;
+    }
+    .azulcielo:before {
+        color: #00BFFF;
+    }
+    .morado:before {
+        color: purple;
+    }
+    .lila:before {
+        color: MediumOrchid;
+    }
+    .rosa:before {
+        color: pink;
+    }
+    .humo:before {
+        
+    }
+    .transparente:before {
+        
+    }
+    .verdeclaro:before {
+        color: #00cc00;
+    }
+    .gris:before {
+        color: grey;
+    }
+    .azulcobalto:before {
+        color: #333C87;
+    }
+    .amarillofosforescente:before {
+        color: #faed07;
+    }
+    .naranjafosforescente:before {
+        color: #FD5F00;
+    }
+    .azulfosforescente:before {
+        color: #0000ff;
+    }
+    .rosafosforescente:before {
+        color: #FF1493;
+    }
+    .verdefosforescente:before {
+        color: #7CFC00;
+    }
+    .beige:before {
+        color:  #F5F5DC;
+    }
+    .oro:before {
+        color: #DAA520;
+    }
+    .cafe:before {
+        color: #b37700;
+    }
+    .azulpastel:before {
+        color: #80bfff;
+    }
+    .azulmarino:before {
+        color: darkblue;
+    }
+    .vino:before {
+        color: #800004;
+    }
+    .rojo-blanco:before {
+        
+    }
+    .azul-blanco:before {
+        
+    }
+    .negro-blanco:before {
+        
+    }
+    .verde-blanco:before {
+        
+    }
+    .rojotransparente:before {
+        color: red;
+    }
+    .rojosolido:before {
+        color: #e00000;
+    }
+    .negrosolido:before {
+        color: #000000;
+    }
+    .verdetransparente:before {
+        color: green;
+    }
+    .lilatransparente:before {
+        color: #e6006c;
+    }
+    .lilasolido:before {
+        color: #e6006c;
+    }
+    .verdesolido:before {
+        color: #009900;
+    }
+    .negrotransparente:before {
+        
+    }
+/* Estilo para color de botones */
+    .escritura {
+      background-color: #00aeef;
+      height: 30px;
+      width: 150px;
+    }
+    
+/* Estilo para zoom */
+    .zoom{
+        /* Aumentamos la anchura y altura durante 2 segundos */
+        transition: width 1s, height 1s, transform 1s;
+        -moz-transition: width 1s, height 1s, -moz-transform 1s;
+        -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+        -o-transition: width 1s, height 1s,-o-transform 1s;
+    }
+    .zoom:hover{
+        /* tranformamos el elemento al pasar el mouse por encima al doble de
+           su tamaño con scale(2). */
+        transform : scale(1.3);
+        -moz-transform : scale(1.3);      /* Firefox */
+        -webkit-transform : scale(1.3);   /* Chrome - Safari */
+        -o-transform : scale(1.3);        /* Opera */
+    }
+    

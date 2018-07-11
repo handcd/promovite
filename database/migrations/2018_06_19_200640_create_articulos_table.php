@@ -19,13 +19,13 @@ class CreateArticulosTable extends Migration
             $table->string('categoria');
             $table->string('subcategoria');
             $table->string('descripcion')->nullable();
-            $table->double('precio_distribuidor');
-            $table->double('precio_publico');
+            $table->double('precio_distribuidor');                 
+            $table->double('precio_publico')->nullable();
             $table->double('largo')->nullable();
             $table->double('ancho')->nullable();
             $table->double('alto')->nullable();
             $table->double('peso')->nullable();
-            $table->string('estatus')->nullable();
+            $table->string('catalogo')->nullable();       
         });
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Articulos;
+use App\colores;
 
 use Illuminate\Support\Facades\DB;
 
@@ -11,8 +12,16 @@ class categoriasController extends Controller
 {
     //Escritura
     public function indexForEscrituraWinideas(){
-    	$itemsEscritura = Articulos::where('categoria','ESCRITURA Y MAS')->get();
-    	return view('categories.escritura',compact('itemsEscritura'));
+        //Título de la página
+        $titulo = 'Escritura';
+        //Obtiene el primer registro y color de cada modelo
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        //Join para juntar un color, modelo e información
+        $escritura = DB::table('articulos')->where('categoria','ESCRITURA Y MÁS')->joinSub($colors,'colors',function ($join){
+            $join->on('articulos.modelo','=','colors.modelo');
+        })->get(); 
+        //Retorno de variables a vista
+        return view('categories.escritura',compact('escritura','titulo'));
     }
     //Bolsas, maletas y textiles
     public function indexForBolsasWinideas(){
@@ -65,5 +74,4 @@ class categoriasController extends Controller
         $itemsViaje = Articulos::where('categoria','VIAJE Y RECREACION')->get();
         return view('categories.viaje_recreacion',compact('itemsViaje'));
     }
-    //Outlet
 }
