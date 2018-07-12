@@ -17,17 +17,10 @@
   	<link href="{{ asset('css/show.css') }}" rel="stylesheet" />
 </head>
 <style type="text/css">
-	.button {
-      background-color: #FFFFFF;
-      border: none;
-      color: white;
-      padding: 5px 5px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 4px;
-      cursor: pointer;
+	.escritura {
+      background-color: #00aeef;
+      height: 30px;
+      width: 150px;
     }
 </style>
 <body>
@@ -42,11 +35,14 @@
 				<center><img src="{{ asset('img/escritura/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="height: 150px; width: 150px; display: block;" class="zoom" id="imagen" /></center>
 			</div>
 			<br><br>
+
 			<div class="col-md-12 text-center" id="colores">
+				<legend>Colores disponibles</legend>
 				@foreach ($colores as $color)				
-					<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?> button" id="<?=$color->color?>" value="<?=$color->color?>"></i>				
+					<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?> clr" id="<?=$color->color?>" value="<?=$color->color?>"></i>				
 				@endforeach		
 			</div>
+			
 			<br><br>
 			<div class="text-center">				
 			  <button type="button" class="btn escritura" data-toggle="collapse" data-target="#descripcion"><i class="fa fa-angle-down"></i> Descripción </button>
