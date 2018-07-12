@@ -39,12 +39,12 @@
 	<div class="row">		
 		<div class="col-md-12"> 
 			<div class="col-md-12 zoom" id="colores">  
-				<center><img src="{{ asset('img/escritura/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="height: 150px; width: 150px; display: block;" class="zoom" /></center>
+				<center><img src="{{ asset('img/escritura/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="height: 150px; width: 150px; display: block;" class="zoom" id="imagen" /></center>
 			</div>
 			<br><br>
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center" id="colores">
 				@foreach ($colores as $color)				
-					<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?> button" id="<?=$color->color?>"></i>				
+					<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?> button" id="<?=$color->color?>" value="<?=$color->color?>"></i>				
 				@endforeach		
 			</div>
 			<br><br>
@@ -84,17 +84,32 @@
 	</div>		
 </body>
 <script type="text/javascript">
+		var counter = 0;
+
+		var imagen = document.getElementById('imagen');
+		
 		@foreach ($colores as $color)
-			var <?=$color->color?> = document.getElementById('<?=$color->color?>');
-			console.log('<?=$color->color?>');
+			counter +=1;
+
+			eval("var color" + counter + "= document.getElementById('<?=$color->color?>')");
 		@endforeach
+		console.log(counter);
 
 		function cambiarImagen(){
-			console.log('<?=$color->color?>');
+				for (var i = 1; i <= counter; i++) {
+					
+				}
+		}
+
+		for (var i =  1; i <= counter; i++) {
+			
+			eval("color" + i).addEventListener('click', function () {
+        		cambiarImagen();
+    		});
+    			
+		  
 		}
 		
-		<?=$color->color?>.addEventListener('click', function () {
-        	cambiarImagen();
-    	});
+		
 </script>
 </html>
