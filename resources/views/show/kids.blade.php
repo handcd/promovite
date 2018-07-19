@@ -9,7 +9,7 @@
 	<div class="row">		
 		<div class="col-md-12"> 
 			<div class="col-md-12 zoom">  
-				<center><img src="{{ asset('img/ESCRITURA Y MÁS/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="height: 150px; width: 150px; display: block;" class="zoom" id="imagen" /></center>
+				<center><img src="{{ asset('img/KIDS/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="height: 150px; width: 150px; display: block;" class="zoom" id="imagen" /></center>
 			</div>
 			<br><br>
 			<div class="col-md-12 text-center">

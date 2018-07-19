@@ -41,7 +41,7 @@
         
     }
     .transparente:before {
-        
+        background-image: url(/home/pablo/Proyectos/promovite/public/img/colores/transparente.png);
     }
     .verdeclaro:before {
         color: #00cc00;

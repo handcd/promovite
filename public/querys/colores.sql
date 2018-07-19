@@ -1466,7 +1466,6 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1496, 'CUSB3252', 'azul'
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1497, 'CV02', 'plata');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1498, 'CV02', 'blanco');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1499, 'CV02', 'rojo');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1500, 'CV03', 'plata');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1501, 'CV03', 'blanco');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1502, 'DES2064', 'azul');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1503, 'DES2064', 'rojo');
