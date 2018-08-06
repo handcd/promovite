@@ -47,7 +47,9 @@
 					<small>${{ $articulo->precio_publico }} c/u</small>
 				</div>		  
 				<br>
-			</div>			
+			</div>	
+			
 		</div>
-	</div>		
+	</div>	
+	
 @endsection

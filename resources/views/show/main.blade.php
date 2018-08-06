@@ -39,8 +39,31 @@
 </style>
 <body>
     @yield('articulo')
+    <div class="col-md-12 text-center">
+		<label>Si desea cotizar ingrese la cantidad de artículos</label>
+		<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
+		<br><br>
+		<span>El precio es: </span> $<span id="spTotal"></span>
+		<br><br>
+	</div>		
+		
 </body>
 <script>
+	function sumar (valor) {
+	    var total = 0;	
+	    valor = parseInt(valor); // Convertir el valor a un entero (número).
+		
+	    total = document.getElementById('spTotal').innerHTML;
+		
+	    // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
+	    total = (total == null || total == undefined || total == "" || total !== 0) ? 0 : total;
+		
+	    /* Esta es la suma. */
+	    total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
+		
+	    // Colocar el resultado de la suma en el control "span".
+	    document.getElementById('spTotal').innerHTML = total;
+	} 
 	//Contador para saber cuantos colores son del artículo seleccionado
 	var counter = 0;
 	//Obteniendo la imagen que se va a cambiar
