@@ -19,6 +19,7 @@
       background-image: linear-gradient(white, #eee 50%, #e4e4e4); 
       background-repeat: no-repeat;
       width: 100%;
+      height: 60px;
       position: fixed;
       z-index: 200;
     }
@@ -26,7 +27,7 @@
       background-image: linear-gradient(white, #eee 50%, #a59f9f); 
       background-repeat: no-repeat;
       position: fixed;
-      height: 80px;
+      height: 60px;
       bottom: 0;
       width: 100%;
     }
@@ -110,8 +111,10 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0 pull-right">
-        <input class="form-control mr-lg-2" type="text" placeholder="Escritura, tecnología, etc...">
+        <center>
+        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Escritura, tecnología, etc...">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Busca</button>
+        </center>
       </form>
     </div>
   </nav>
@@ -124,8 +127,9 @@
   <div class="footer">
       <div class="col-md-12 text-center">
         <div class="credits">
-        <br>
-          &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.
+          <br>
+          <h5 class="pull-left">
+          &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.</h5>
          </div>
       </div>
   </div>

@@ -1921,7 +1921,7 @@ output {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 350px;
   height: 45px;
   padding: 6px 12px;
   font-size: 14px;
@@ -4374,10 +4374,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-collapse {
-  max-height: 340px;
+  max-height: auto;
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
+  background: linear-gradient(white, #eee 50%, #e4e4e4);
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -4539,6 +4540,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+  font-size: 15px;
 }
 
 @media (max-width: 767px) {

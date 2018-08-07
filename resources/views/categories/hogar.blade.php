@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-	<br><br><br><br>
+	<br><br><br>
 	<center>
     <div class="row text-center">
       <div class="col-md-10 col-md-offset-1"> 

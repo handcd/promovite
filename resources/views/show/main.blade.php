@@ -43,7 +43,7 @@
 		<label>Si desea cotizar ingrese la cantidad de artículos</label>
 		<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
 		<br><br>
-		<span>El precio es: </span> $<span id="spTotal"></span>
+		<span>El costo sería: </span> $<span id="spTotal"></span>
 		<br><br>
 	</div>		
 		
@@ -60,9 +60,9 @@
 		
 	    /* Esta es la suma. */
 	    total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
-		
+		var costo = total.toFixed(2);
 	    // Colocar el resultado de la suma en el control "span".
-	    document.getElementById('spTotal').innerHTML = total;
+	    document.getElementById('spTotal').innerHTML = costo;
 	} 
 	//Contador para saber cuantos colores son del artículo seleccionado
 	var counter = 0;
