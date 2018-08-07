@@ -79,7 +79,7 @@ class categoriasController extends Controller
     //Llaveros, linternas y herramientas
     public function indexForLinternasWinideas(){
        //Título de la página
-        $titulo = 'Tecnología';
+        $titulo = 'Llaveros, linternas y herramientas';
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
