@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
-  
+   
   <style>
     {{-- Estilos para navbar & footer --}}
     .navbar.bg-light {
@@ -57,7 +57,6 @@
     .escritura {
       background-color: #00aeef;
     }
-
   </style>
 </head>
 <body>
@@ -120,9 +119,14 @@
   </nav>
   
   <div class="container">
+    <span class="ir-arriba fa fa-angle-up"></span>
     <center>
-    @yield('content')
+    <section class="contenido">
+      @yield('content')
+    </section>
     </center>
+    
+
   </div>
   <div class="footer">
       <div class="col-md-12 text-center">

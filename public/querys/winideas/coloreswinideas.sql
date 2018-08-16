@@ -1120,8 +1120,6 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1157, 'A2477', 'vino');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1158, 'A2477', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1159, 'A2477', 'beige');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1160, 'A2478', 'plata');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1161, 'A2478', 'oro');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1162, 'A2478', 'plata');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1163, 'A2478', 'oro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1164, 'A2480', 'blanco');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1165, 'A2481', 'blanco');
