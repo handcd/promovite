@@ -2,7 +2,7 @@
 
 //Rutas para el inicio
 Route::get('/', function () {
-    return view('escritura');
+    return view('categories.escritura');
 });
 
 Route::get('/index', function () {
