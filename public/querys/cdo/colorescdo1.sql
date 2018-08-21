@@ -1,56 +1,3 @@
-#
-# DUMP FILE
-#
-# Database is ported from MS Access
-#------------------------------------------------------------------
-# Created using "MS Access to MySQL" form http://www.bullzip.com
-# Program Version 5.5.282
-#
-# OPTIONS:
-#   sourcefilename=C:/Users/Contreras/Documents/cdo1.accdb
-#   sourceusername=
-#   sourcepassword=
-#   sourcesystemdatabase=
-#   destinationdatabase=promovite
-#   storageengine=MyISAM
-#   dropdatabase=0
-#   createtables=1
-#   unicode=1
-#   autocommit=1
-#   transferdefaultvalues=1
-#   transferindexes=1
-#   transferautonumbers=1
-#   transferrecords=1
-#   columnlist=1
-#   tableprefix=
-#   negativeboolean=0
-#   ignorelargeblobs=0
-#   memotype=LONGTEXT
-#   datetimetype=DATETIME
-#
-
-CREATE DATABASE IF NOT EXISTS `promovite`;
-USE `promovite`;
-
-#
-# Table structure for table 'colores'
-#
-
-DROP TABLE IF EXISTS `colores`;
-
-CREATE TABLE `colores` (
-  `id` INTEGER NOT NULL, 
-  `modelo` VARCHAR(255), 
-  `color` VARCHAR(255), 
-  PRIMARY KEY (`id`)
-) ENGINE=myisam DEFAULT CHARSET=utf8;
-
-SET autocommit=1;
-
-#
-# Dumping data for table 'colores'
-#
-
 INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (4515, 'EN18', 'madera');
 INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (4516, 'T520', 'colores');
 INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (4517, 'T515', 'negro');
@@ -895,5 +842,3 @@ INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (5355, 'T40', 'azul');
 INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (5356, 'T40', 'transparente');
 INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (5357, 'T315', 'blanco');
 INSERT INTO `colores` (`id`, `modelo`, `color`) VALUES (5358, 'T445', 'transparente');
-# 844 records
-

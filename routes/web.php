@@ -2,7 +2,7 @@
 
 //Rutas para el inicio
 Route::get('/', function () {
-    return view('welcome');
+    return view('escritura');
 });
 
 Route::get('/index', function () {
