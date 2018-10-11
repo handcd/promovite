@@ -1,149 +1,117 @@
 @extends('layouts.main')
 @section('content')
-            <br><br><br><br>
-            <center>
-                <div class="row center-block">
-                  <div class="col-md-10 col-md-offset-1">
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-primary text-white">Modelo 014B</h3>
-                        
-                        <img src="{{ asset('img/winideas/014B/014B_azul.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">Bolígrafo de plástico traslúcido. Mecanismo de click.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-warning text-white">Modelo 1024</h3>
-                        
-                        <img src="{{ asset('img/winideas/1024/1024_plata.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">LAPIZ DE MADERA C/ARILLO Y GOMA</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-danger text-white">Modelo 1103</h3>
-                        
-                        <img src="{{ asset('img/winideas/1103/1103_rojo.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">BOLIGRAFO COOPER</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-success text-white">Modelo a2426</h3>
-                        
-                        <img src="{{ asset('img/winideas/a2426/a2426_blanco.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">BOLÍGRAFO METÁLICO MAJESTIC</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </center><br><br>
-              <center>
-            
+  <style type="text/css">
+    b{
+      font-size: 300%;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+    }
 
-                <div class="row center-block">
-                  <div class="col-md-10 col-md-offset-1">
-                    <div class="col-md-3 col-xs-6">
-                      <button type="button"  data-toggle="modal" data-target="#myModal">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-primary text-white">Modelo 1104</h3>
-                        
-                        <img src="{{ asset('img/winideas/parte1/1104/1104_verde.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">Bolígrafo de plástico. Mecanismo de click.</p>
-                        </div>
-                      </div>
-                      </button>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-warning text-white">Modelo 1116</h3>
-                        
-                        <img src="{{ asset('img/winideas/parte1/1116/1116_rojo_lrg.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">Bolígrafo de plástico cuerpo blanco, tapón y clip de color. Mecanismo de click.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-danger text-white">Modelo 1115</h3>
-                        
-                        <img src="{{ asset('img/winideas/parte1/1115/1115_azul_lrg.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">Bolígrafo básico, línea económica, cuerpo blanco sólido con tapa y tapón en color.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-success text-white">Modelo 1110</h3>
-                        
-                        <img src="{{ asset('img/winideas/parte1/1110/1110_naranja_lrg.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">Bolígrafo con mecanismo de click</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </center><br><br>
-              <center>
-                <div class="row center-block">
-                  <div class="col-md-10 col-md-offset-1">
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-primary text-white">Modelo 014B</h3>
-                        
-                        <img src="{{ asset('img/winideas/014B/014B_azul.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">Bolígrafo de plástico traslúcido. Mecanismo de click.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-warning text-white">Modelo 1024</h3>
-                        
-                        <img src="{{ asset('img/winideas/1024/1024_plata.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">LAPIZ DE MADERA C/ARILLO Y GOMA 1024 BLANCO</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-danger text-white">Modelo 1103</h3>
-                        
-                        <img src="{{ asset('img/winideas/1103/1103_rojo.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">BOLIGRAFO COOPER /p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-xs-6">
-                      <div class="card mb-3">
-                        <h3 class="card-header  bg-success text-white">Modelo 12426</h3>
-                        
-                        <img src="{{ asset('img/winideas/a2426/a2426_blanco.jpg') }}" alt="Card image" style="height: 200px; width: 100%; display: block;">
-                        <div class="card-body">
-                          <p class="card-text">BOLÍGRAFO METÁLICO MAJESTIC</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </center><br><br>
-@endsection
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-  
-  
+    .overlay {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      width: 100%;
+      height:0;
+      transition: .5s ease;
+    }
+
+    .container:hover .overlay {
+      bottom: 0;
+      height: 100%;
+    }
+
+    .text {
+      white-space: nowrap; 
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+  </style>
+  <br><br><br>
+  <div class="text-center">
+    <img src="{{ asset('img/landing/header-11.jpg')}}" class="img-rounded" style=" width: 100%; display: block;">
+  </div>
+  <br><br>
+  <div class="text-center">
+    <h3>
+      Empresa 100% Mexicana dedicada a la fabricación, <br>
+      importación, comercialización, distribución y venta de <br>
+      artículos promocionales y publicitarios
+    </h3>
+  </div>
+  <br><br>
+  <div class="text-center">
+    <b>NOVEDADES</b>
+    <div class="row">
+      <div class="col-md-12">          
+          <div class="col-sm-4">                                                
+            <div class="card mb-4">
+              <h3 class="card-header text-white escritura"> TECNOLOGÍA </h3>  
+              <img src="{{ asset('img/landing/novedades1.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
+            </div>  
+          </div>
+          <div class="col-sm-4">                                                
+            <div class="card mb-4">
+              <h3 class="card-header text-white escritura"> HOGAR </h3>  
+              <img src="{{ asset('img/landing/novedades2.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
+            </div>  
+          </div>
+          <div class="col-sm-4">                                                
+            <div class="card mb-4">
+              <h3 class="card-header text-white escritura"> OFICINA </h3> 
+              <img src="{{ asset('img/landing/novedades3.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />     
+            </div>  
+          </div>
+      </div>        
+    </div>   
+  </div>
+  <div class="container">
+    <img src="{{ asset('img/landing/footer.jpg') }}" class="image">
+    <div class="overlay">
+      <div class="text"><h1>Al ser fabricantes, tenemos todo <br> el proceso de producción en <br> nuestras manos</h1></div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <b>NUESTROS SERVICIOS</b>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-3 text-white" style="background-color: red; height: 150px"><br><br>Bordados </div>
+    <div class="col-sm-3 text-white" style="background-color: #8bc43f"><br><br>Serigrafía</div>
+    <div class="col-sm-3 text-white" style="background-color: #f9a722"><br><br>Tampografía</div>
+    <div class="col-sm-3 text-white" style="background-color: #404042"><br>Grabado con punta diamante</div>
+    <div class="col-sm-3 text-white" style="background-color: #00adef; height: 150px"><br><br>Grabado láser</div>
+    <div class="col-sm-3 text-white" style="background-color: #ff00ff"><br>Grabado en bajo relieve </div>
+    <div class="col-sm-3 text-white" style="background-color: #93278f"><br><br>Hot stamping</div>
+    <div class="col-sm-3 text-white" style="background-color: #000000"><br><br>Área de diseño</div>   
+  </div>
+  <br><br>
+  <div class=" container color-sm-3 text-white" style="width: 120%">
+      <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>ESTAMOS PARA SERVIRLE</b>
+          <br><br><br><br><br>
+          <button type="button" class="btn btn-outline-primary text-white"><b>CONTÁCTANOS</b></button>
+        </div>
+      </div> 
+    </div> 
+  <br><br><br>
+@endsection  
