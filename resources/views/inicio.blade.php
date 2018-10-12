@@ -1,9 +1,7 @@
 @extends('layouts.main')
 @section('content')
   <style type="text/css">
-    b{
-      font-size: 300%;
-    }
+   
     .container {
       position: relative;
       width: 100%;
@@ -84,7 +82,7 @@
   <div class="container">
     <img src="{{ asset('img/landing/footer.jpg') }}" class="image">
     <div class="overlay">
-      <div class="text"><h1>Al ser fabricantes, tenemos todo <br> el proceso de producción en <br> nuestras manos</h1></div>
+      <div class="text"><h5>Al ser fabricantes, tenemos todo <br> el proceso de producción en <br> nuestras manos</h5></div>
     </div>
   </div>
   <br>
@@ -94,22 +92,22 @@
   <br>
   <div class="row">
     <div class="col-sm-3 text-white" style="background-color: red; height: 150px"><br><br>Bordados </div>
-    <div class="col-sm-3 text-white" style="background-color: #8bc43f"><br><br>Serigrafía</div>
-    <div class="col-sm-3 text-white" style="background-color: #f9a722"><br><br>Tampografía</div>
-    <div class="col-sm-3 text-white" style="background-color: #404042"><br>Grabado con punta diamante</div>
+    <div class="col-sm-3 text-white" style="background-color: #8bc43f; height: 150px"><br><br>Serigrafía</div>
+    <div class="col-sm-3 text-white" style="background-color: #f9a722; height: 150px"><br><br>Tampografía</div>
+    <div class="col-sm-3 text-white" style="background-color: #404042; height: 150px"><br><br>Grabado con punta diamante</div>
     <div class="col-sm-3 text-white" style="background-color: #00adef; height: 150px"><br><br>Grabado láser</div>
-    <div class="col-sm-3 text-white" style="background-color: #ff00ff"><br>Grabado en bajo relieve </div>
-    <div class="col-sm-3 text-white" style="background-color: #93278f"><br><br>Hot stamping</div>
-    <div class="col-sm-3 text-white" style="background-color: #000000"><br><br>Área de diseño</div>   
+    <div class="col-sm-3 text-white" style="background-color: #ff00ff; height: 150px"><br>Grabado en bajo relieve </div>
+    <div class="col-sm-3 text-white" style="background-color: #93278f; height: 150px"><br><br>Hot stamping</div>
+    <div class="col-sm-3 text-white" style="background-color: #000000; height: 150px"><br><br>Área de diseño</div>   
   </div>
   <br><br>
-  <div class=" container color-sm-3 text-white" style="width: 120%">
+  <div class=" container color-sm-3 text-white" style="width: 100%">
       <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
       <div class="overlay">
         <div class="text">
-          <b>ESTAMOS PARA SERVIRLE</b>
+          <p>ESTAMOS PARA SERVIRLE</p>
           <br><br><br><br><br>
-          <button type="button" class="btn btn-outline-primary text-white"><b>CONTÁCTANOS</b></button>
+          <button type="button" class="btn btn-outline-primary text-white"><p>CONTÁCTANOS</p></button>
         </div>
       </div> 
     </div> 
