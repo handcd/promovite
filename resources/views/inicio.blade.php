@@ -105,9 +105,8 @@
       <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
       <div class="overlay">
         <div class="text">
-          <p>ESTAMOS PARA SERVIRLE</p>
-          <br><br><br><br><br>
-          <button type="button" class="btn btn-outline-primary text-white"><p>CONTÁCTANOS</p></button>
+          <h5>ESTAMOS PARA SERVIRLE</h5>
+          <button type="button" class="btn btn-outline-primary text-white"><h5>CONTÁCTANOS</h5></button>
         </div>
       </div> 
     </div> 
