@@ -101,7 +101,7 @@
     <div class="col-sm-3 text-white" style="background-color: #000000; height: 150px"><br><br>Área de diseño</div>   
   </div>
   <br><br>
-  <div class=" container color-sm-3 text-white" style="width: 100%">
+  <div class=" container text-white" style="width: 100%">
       <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
       <div class="overlay">
         <div class="text">
