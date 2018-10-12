@@ -2,7 +2,7 @@
 
 //Rutas para el inicio
 Route::get('/', function () {
-    return view('categories.escritura');
+    return view('inicio');
 });
 
 Route::get('/index', function () {
@@ -13,7 +13,7 @@ Route::get('/index', function () {
 });*/
 Auth::routes();
 //Todas las rutas de las categorias:(
-Route::get('/','categoriasController@indexForEscrituraWinideas');
+Route::get('/','categoriasController@index');
 
 Route::get('/escritura','categoriasController@indexForEscrituraWinideas');
 Route::get('/bolsas-maletas-textiles','categoriasController@indexForBolsasWinideas');

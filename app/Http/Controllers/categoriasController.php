@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class categoriasController extends Controller
 {
+    //Inicio
+    public function index(){
+        //Título de la página
+        $titulo = 'Bienvenido';
+        return view('inicio',compact('titulo'));
+    }
     //Escritura
     public function indexForEscrituraWinideas(){
         //Título de la página
