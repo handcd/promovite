@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class categoriasController extends Controller
 {
+    //Nosotros
+    public function Nosotros(){
+        //Título de la página
+        $titulo = 'Nosotros';
+        return view('Nosotros',compact('titulo'));
+    }
     //Inicio
     public function index(){
         //Título de la página

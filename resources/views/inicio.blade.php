@@ -61,13 +61,13 @@
           <div class="col-sm-4">                                                
             <div class="card mb-4">
               <h3 class="card-header text-white escritura"> TECNOLOGÍA </h3>  
-              <img src="{{ asset('img/landing/novedades1.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
+              <img src="{{ asset('img/landing/novedades2.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
             </div>  
           </div>
           <div class="col-sm-4">                                                
             <div class="card mb-4">
               <h3 class="card-header text-white escritura"> HOGAR </h3>  
-              <img src="{{ asset('img/landing/novedades2.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
+              <img src="{{ asset('img/landing/novedades1.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
             </div>  
           </div>
           <div class="col-sm-4">                                                
@@ -96,19 +96,26 @@
     <div class="col-sm-3 text-white" style="background-color: #f9a722; height: 150px"><br><br>Tampografía</div>
     <div class="col-sm-3 text-white" style="background-color: #404042; height: 150px"><br><br>Grabado con punta diamante</div>
     <div class="col-sm-3 text-white" style="background-color: #00adef; height: 150px"><br><br>Grabado láser</div>
-    <div class="col-sm-3 text-white" style="background-color: #ff00ff; height: 150px"><br>Grabado en bajo relieve </div>
+    <div class="col-sm-3 text-white" style="background-color: #ff00ff; height: 150px"><br><br>Grabado en bajo relieve</div>
     <div class="col-sm-3 text-white" style="background-color: #93278f; height: 150px"><br><br>Hot stamping</div>
     <div class="col-sm-3 text-white" style="background-color: #000000; height: 150px"><br><br>Área de diseño</div>   
   </div>
   <br><br>
   <div class=" container text-white" style="width: 100%">
-      <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
-      <div class="overlay">
-        <div class="text">
-          <h5>ESTAMOS PARA SERVIRLE</h5>
-          <button type="button" class="btn btn-outline-primary text-white"><h5>CONTÁCTANOS</h5></button>
-        </div>
-      </div> 
+    <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
+    <div class="overlay">
+      <div class="text">
+        <h5><strong>ESTAMOS PARA SERVIRLE, CONTÁCTENOS</strong></h5><br>
+        <a href="http://www.facebook.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-facebook"></i></a>
+        <a href="http://www..com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-linkedin"></i></a>
+        <a href="http://www.instagram.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-instagram"></i></a>
+      </div>
     </div> 
+  </div> 
+  <div class="text-center">
+    Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez
+    <br>
+    Tel. 
+  </div>
   <br><br><br>
 @endsection  

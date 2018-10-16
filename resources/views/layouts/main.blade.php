@@ -70,7 +70,7 @@
     <div class="collapse navbar-collapse" id="navbarColor03" aria-label="Button group with nested dropdown">
       <ul class="navbar-nav mr-auto dropdown">
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa fa-home"></i> Inicio</a>
+          <a class="nav-link" href=" {{ url('/') }}"><i class="fa fa-home"></i> Inicio</a>
         </li>
         <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Categorias</a>
@@ -88,8 +88,11 @@
                   <li><a href="{{ url('/viaje-recreacion') }}">Viaje y recreación</a></li>
               </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/nosotros') }}">Nosotros</a>
+        </li>
         
-        <li class="dropdown">
+        <!--<li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Novedades</a>
               <ul class="dropdown-menu">
                   <li><a href="#">Inbox</a></li>
@@ -98,17 +101,7 @@
                   <li class="divider"></li>
                   <li><a href="#">Trash</a></li>
               </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Nosotros</a>
-              <ul class="dropdown-menu">
-                  <li><a href="#">Inbox</a></li>
-                  <li><a href="#">Drafts</a></li>
-                  <li><a href="#">Sent Items</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Trash</a></li>
-              </ul>
-        </li>
+        </li>-->
       </ul>
       <form class="form-inline my-2 my-lg-0 pull-right">
         <center>
