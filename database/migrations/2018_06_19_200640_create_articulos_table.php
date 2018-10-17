@@ -25,7 +25,7 @@ class CreateArticulosTable extends Migration
             $table->string('ancho')->nullable();
             $table->string('alto')->nullable();
             $table->string('peso')->nullable();
-            $table->string('catalogo')->nullable();       
+            $table->string('catalogo')->nullable();    
         });
     }
 

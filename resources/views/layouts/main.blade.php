@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es_MX">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">-->
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
   <link rel="apple-touch-icon" sizes="76x76" href="{{ url('img/promovite-icon.png') }}" />
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
+
    
   <style>
     {{-- Estilos para navbar & footer --}}
