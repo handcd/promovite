@@ -1,54 +1,3 @@
-#
-# DUMP FILE
-#
-# Database is ported from MS Access
-#------------------------------------------------------------------
-# Created using "MS Access to MySQL" form http://www.bullzip.com
-# Program Version 5.5.282
-#
-# OPTIONS:
-#   sourcefilename=C:/Users/axel/Documents/colores_forpromotional.accdb
-#   sourceusername=
-#   sourcepassword=
-#   sourcesystemdatabase=
-#   destinationdatabase=promovite
-#   storageengine=MyISAM
-#   dropdatabase=1
-#   createtables=1
-#   unicode=1
-#   autocommit=1
-#   transferdefaultvalues=1
-#   transferindexes=0
-#   transferautonumbers=0
-#   transferrecords=1
-#   columnlist=1
-#   tableprefix=
-#   negativeboolean=0
-#   ignorelargeblobs=0
-#   memotype=LONGTEXT
-#   datetimetype=DATETIME
-#
-
-DROP DATABASE IF EXISTS `promovite`;
-CREATE DATABASE IF NOT EXISTS `promovite`;
-USE `promovite`;
-
-#
-# Table structure for table 'colores'
-#
-
-DROP TABLE IF EXISTS `colores`;
-
-CREATE TABLE `colores` (
-  `modelo` VARCHAR(255), 
-  `color` VARCHAR(255)
-) ENGINE=myisam DEFAULT CHARSET=utf8;
-
-SET autocommit=1;
-
-#
-# Dumping data for table 'colores'
-#
 
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('BMP001', 'plata');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('BP 17056', 'carton');
@@ -1083,13 +1032,13 @@ INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 007', 'azul');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 007', 'blanco');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 007', 'negro');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 008', 'negro');
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', NULL);
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 010', '');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 011', 'plata');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 012', 'plata');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('SO 013', 'azul');

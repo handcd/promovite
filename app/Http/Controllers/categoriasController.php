@@ -29,7 +29,7 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $escritura = DB::table('articulos')->where('categoria','ESCRITURA Y MÁS')->joinSub($colors,'colors',function ($join){
+        $escritura = DB::table('articulos')->where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
         })->get(); 
         //Retorno de variables a vista
