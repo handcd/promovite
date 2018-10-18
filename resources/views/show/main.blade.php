@@ -77,6 +77,7 @@
 		eval("var valueColor" + counter + "= document.getElementById('<?=$color->color?>').value");		
 	@endforeach
 	//Evento para cambiar imagen dependiendo del color que se haya presionado
+	{{--@if ( $articulo->catalogo === 'PWD') {--}}
 	function cambiarImagen(){
 		for (var i = 1; i <= counter; i++) {
 			if (eval("color" + i).checked) {
@@ -165,7 +166,10 @@
 				}
 			}
 		}
-	}	
+	}
+	/*}else{
+		console.log('tu mamá');
+	}	*/
 	//Asignación de eventos a cada bolita de color
 	for (var i =  1; i <= counter; i++) {
 		eval("color" + i).addEventListener('click', function () {
