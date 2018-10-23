@@ -31,7 +31,10 @@ class categoriasController extends Controller
         //Join para juntar un color, modelo e información
         $escritura = DB::table('articulos')->where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
+
+        //$escritura = $articulos->sortBy('subcategoria');
+        //return $articulos; 
         //Retorno de variables a vista
         return view('categories.escritura',compact('escritura','titulo'));
     }
@@ -42,9 +45,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $bolsas = DB::table('articulos')->where('categoria','BOLSAS, MALETAS Y TEXTILES')->joinSub($colors,'colors',function ($join){
+        $bolsas = DB::table('articulos')->where('categoria','Bolsas, maletas y textiles')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
     	return view('categories.bolsas_maletas_textiles',compact('bolsas','titulo'));
     }
@@ -55,9 +58,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $oficina = DB::table('articulos')->where('categoria','OFICINA')->joinSub($colors,'colors',function ($join){
+        $oficina = DB::table('articulos')->where('categoria','Oficina')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.oficina',compact('oficina','titulo'));
     }
@@ -69,9 +72,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $kids = DB::table('articulos')->where('categoria','KIDS')->joinSub($colors,'colors',function ($join){
+        $kids = DB::table('articulos')->where('categoria','Kids')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.kids',compact('kids','titulo'));
     }
@@ -82,9 +85,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $tecnologia = DB::table('articulos')->where('categoria','TECNOLOGÍA')->joinSub($colors,'colors',function ($join){
+        $tecnologia = DB::table('articulos')->where('categoria','tecnologia')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.tecnologias',compact('tecnologia','titulo'));
     }
@@ -95,9 +98,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $linternas = DB::table('articulos')->where('categoria','LLAVEROS, LINTERNAS Y HERRAMIE')->joinSub($colors,'colors',function ($join){
+        $linternas = DB::table('articulos')->where('categoria','Llaveros, linternas y herramie')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.llaveros_linternas_herramientas',compact('linternas','titulo'));
     }
@@ -108,9 +111,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $salud = DB::table('articulos')->where('categoria','SALUD Y BELLEZA')->joinSub($colors,'colors',function ($join){
+        $salud = DB::table('articulos')->where('categoria','Salud y belleza')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.salud_belleza',compact('salud','titulo'));
     }
@@ -121,9 +124,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $tazas = DB::table('articulos')->where('categoria','TAZAS, TERMOS y CILINDROS')->joinSub($colors,'colors',function ($join){
+        $tazas = DB::table('articulos')->where('categoria','Tazas, termos y cilindros')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.tazas_termos_cilindros',compact('tazas','titulo'));
     }
@@ -134,9 +137,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $hogar = DB::table('articulos')->where('categoria','HOGAR Y ESTILO DE VIDA')->joinSub($colors,'colors',function ($join){
+        $hogar = DB::table('articulos')->where('categoria','Hogar y estilo de vida')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.hogar',compact('hogar', 'titulo'));
     }
@@ -147,9 +150,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $sublimacion = DB::table('articulos')->where('categoria','SUBLIMACIÓN')->joinSub($colors,'colors',function ($join){
+        $sublimacion = DB::table('articulos')->where('categoria','sublimacion')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.sublimacion',compact('sublimacion', 'titulo'));
     }
@@ -160,9 +163,9 @@ class categoriasController extends Controller
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $viaje = DB::table('articulos')->where('categoria','VIAJE Y RECREACIÓN')->joinSub($colors,'colors',function ($join){
+        $viaje = DB::table('articulos')->where('categoria','Viaje y recreacion')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get(); 
+        })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.viaje_recreacion',compact('viaje', 'titulo'));
     }
