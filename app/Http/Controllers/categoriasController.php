@@ -32,9 +32,6 @@ class categoriasController extends Controller
         $escritura = DB::table('articulos')->where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
         })->get()->sortBy('subcategoria'); 
-
-        //$escritura = $articulos->sortBy('subcategoria');
-        //return $articulos; 
         //Retorno de variables a vista
         return view('categories.escritura',compact('escritura','titulo'));
     }
