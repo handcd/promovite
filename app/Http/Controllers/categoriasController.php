@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Articulos;
 use App\colores;
 
-use Illuminate\Support\Facades\DB;
 
 class categoriasController extends Controller
 {
