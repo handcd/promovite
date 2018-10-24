@@ -32,12 +32,13 @@ class HomeController extends Controller
                     ->where('articulos.modelo', 'LIKE', '%'.$search.'%')
                     ->joinSub($colors,'colors',function ($join){
                         $join->on('articulos.modelo','=','colors.modelo');
-                    })->get();
+                    })
+                    ->orWhere('articulos.subcategoria', 'LIKE', '%'.$search.'%')->get();
 
         
         if (count($articulo) == 0){
             return View('search')
-            ->with('message', 'No hay resultados que mostrar :(')
+            ->with('message', 'No hay resultados que mostrar :( Trata buscando el artículo sin el prefijo. EJ. PW-A2305 -> A2305')
             ->with('search', $search)
             ->with('titulo','Búsqueda');
         } else{
