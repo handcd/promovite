@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Input;
 //Rutas para el inicio
 Route::get('/','categoriasController@index');
 
@@ -9,29 +9,39 @@ Route::get('/index','categoriasController@index');
 Route::get('/nosotros','categoriasController@nosotros');
 //Rutas de autenticación
 Auth::routes();
-
+//Filtrooooooooo
+Route::get('/searchredirect', function(){
+     
+    /* Nuevo: si el argumento search está vacío regresar a la página anterior */
+    if (empty(Input::get('search'))) return redirect()->back();
+    
+    $search = urlencode(e(Input::get('search')));
+    $route = "/search/$search";
+    return redirect($route);
+});
+Route::get("/search/{search}", "HomeController@search");
 //Todas las rutas de las categorias:(
-Route::get('/escritura','categoriasController@indexForEscrituraWinideas');
-Route::get('/bolsas-maletas-textiles','categoriasController@indexForBolsasWinideas');
-Route::get('/hogar','categoriasController@indexForHogarWinideas');
-Route::get('/kids','categoriasController@indexForKidsWinideas');
-Route::get('/llaveros-linternas-herramientas','categoriasController@indexForLinternasWinideas');
-Route::get('/oficina','categoriasController@indexForOficinaWinideas');
-Route::get('/salud-belleza','categoriasController@indexForSaludWinideas');
-Route::get('/sublimacion','categoriasController@indexForSublimacionWinideas');
-Route::get('/tazas-termos-cilindros','categoriasController@indexForTazasWinideas');
-Route::get('/tecnologia','categoriasController@indexForTecnologiaWinideas');
-Route::get('/viaje-recreacion','categoriasController@indexForViajeWinideas');
+Route::get('/Escritura y mas','categoriasController@indexForEscrituraWinideas');
+Route::get('/Bolsas, maletas y textiles','categoriasController@indexForBolsasWinideas');
+Route::get('/Hogar y estilo de vida','categoriasController@indexForHogarWinideas');
+Route::get('/Kids','categoriasController@indexForKidsWinideas');
+Route::get('/Llaveros, linternas y herramie','categoriasController@indexForLinternasWinideas');
+Route::get('/Oficina','categoriasController@indexForOficinaWinideas');
+Route::get('/Salud y belleza','categoriasController@indexForSaludWinideas');
+Route::get('/Sublimacion','categoriasController@indexForSublimacionWinideas');
+Route::get('/Tazas, termos y cilindros','categoriasController@indexForTazasWinideas');
+Route::get('/Tecnologia','categoriasController@indexForTecnologiaWinideas');
+Route::get('/Viaje y recreacion','categoriasController@indexForViajeWinideas');
 
 //Rutas para mostrar articulos
-Route::get('/escritura/{id}', 'showController@showEscritura');
-Route::get('/bolsas_maletas_textiles/{id}', 'showController@showBolsas');
-Route::get('/oficina/{id}', 'showController@showOficina');
-Route::get('/kids/{id}', 'showController@showKids');
-Route::get('/tecnologia/{id}', 'showController@showTecnologia');
-Route::get('/llaveros-linternas-herramientas/{id}', 'showController@showLlaveros');
-Route::get('/salud-belleza/{id}', 'showController@showSalud');
-Route::get('/tazas-termos-cilindros/{id}', 'showController@showTazas');
-Route::get('/hogar/{id}', 'showController@showHogar');
-Route::get('/sublimacion/{id}', 'showController@showSublimacion');
-Route::get('/viaje-recreacion/{id}', 'showController@showViaje');
+Route::get('/Escritura y mas/{id}', 'showController@showEscritura');
+Route::get('/Bolsas, maletas y textiles/{id}', 'showController@showBolsas');
+Route::get('/Oficina/{id}', 'showController@showOficina');
+Route::get('/Kids/{id}', 'showController@showKids');
+Route::get('/Tecnologia/{id}', 'showController@showTecnologia');
+Route::get('/Llaveros, linternas y herramientas/{id}', 'showController@showLlaveros');
+Route::get('/Salud y belleza/{id}', 'showController@showSalud');
+Route::get('/Tazas, termos y cilindros/{id}', 'showController@showTazas');
+Route::get('/Hogar y estilo de vida/{id}', 'showController@showHogar');
+Route::get('/Sublimacion/{id}', 'showController@showSublimacion');
+Route::get('/Viaje y recreacion/{id}', 'showController@showViaje');

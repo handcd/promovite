@@ -77,17 +77,17 @@
         <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Categorias</a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                  <li><a href="{{ url('/escritura') }}">Escritura</a></li>
-                  <li><a href="{{ url('/oficina') }}">Oficina</a></li>
-                  <li><a href="{{ url('/kids') }}">Kids</a></li>
-                  <li><a href="{{ url('/tecnologia') }}">Tecnología</a></li>
-                  <li><a href="{{ url('/llaveros-linternas-herramientas') }}">Llaveros, linternas y herrámientas</a></li>
-                  <li><a href="{{ url('/salud-belleza') }}">Salud y belleza</a></li>
-                  <li><a href="{{ url('/bolsas-maletas-textiles') }}">Bolsas, maletas y textiles</a></li>
-                  <li><a href="{{ url('/tazas-termos-cilindros') }}">Tazas, termos y cilindros</a></li>
-                  <li><a href="{{ url('/hogar') }}">Hogar y estilo de vida</a></li>
-                  <li><a href="{{ url('/sublimacion') }}">Sublimación</a></li>
-                  <li><a href="{{ url('/viaje-recreacion') }}">Viaje y recreación</a></li>
+                  <li><a href="{{ url('/Escritura y mas') }}">Escritura</a></li>
+                  <li><a href="{{ url('/Oficina') }}">Oficina</a></li>
+                  <li><a href="{{ url('/Kids') }}">Kids</a></li>
+                  <li><a href="{{ url('/Tecnologia') }}">Tecnología</a></li>
+                  <li><a href="{{ url('/Llaveros, linternas y herramientas') }}">Llaveros, linternas y herrámientas</a></li>
+                  <li><a href="{{ url('/Salud y belleza') }}">Salud y belleza</a></li>
+                  <li><a href="{{ url('/Bolsas, maletas y textiles') }}">Bolsas, maletas y textiles</a></li>
+                  <li><a href="{{ url('/Tazas, termos y cilindros') }}">Tazas, termos y cilindros</a></li>
+                  <li><a href="{{ url('/Hogar y estilo de vida') }}">Hogar y estilo de vida</a></li>
+                  <li><a href="{{ url('/Sublimacion') }}">Sublimación</a></li>
+                  <li><a href="{{ url('/Viaje y recreacion') }}">Viaje y recreación</a></li>
               </ul>
         </li>
         <li class="nav-item">
@@ -105,10 +105,10 @@
               </ul>
         </li>-->
       </ul>
-      <form class="form-inline my-2 my-lg-0 pull-right">
+      <form class="form-inline my-2 my-lg-0 pull-right" role="search" action="{{ url('/searchredirect') }}">
         <center>
-        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Escritura, tecnología, etc...">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Busca</button>
+        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Ingrese un modelo" name="search" id="search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
         </center>
       </form>
     </div>
