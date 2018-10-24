@@ -23,13 +23,13 @@ class categoriasController extends Controller
         return view('inicio',compact('titulo'));
     }
     //Escritura
-    public function indexForEscrituraWinideas(){
+    public function indexForEscrituraWinideas(Request $request){
         //Título de la página
         $titulo = 'Escritura';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = Colores::select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
-        $escritura = DB::table('articulos')->where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
+        $escritura = Articulos::where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
         })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
