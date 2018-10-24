@@ -8,7 +8,7 @@ Route::get('/index','categoriasController@index');
 //Ruta para pestaña "nosotros"
 Route::get('/nosotros','categoriasController@nosotros');
 //Rutas de autenticación
-Auth::routes();
+//Auth::routes();
 //Filtrooooooooo
 Route::get('/searchredirect', function(){
      

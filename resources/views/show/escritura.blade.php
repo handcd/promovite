@@ -1,7 +1,8 @@
 @extends('show.main')
 @section('articulo')
+	<br><br>
 	<div class="row">
-		<div class="col-md-12 text-center">
+		<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 			<h3> Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }} </h3>
 		</div>		
 	</div>
@@ -16,41 +17,46 @@
 				@endif
 			</div>
 			<br><br>
-			<div class="col-md-12 text-center">
-				<legend><strong>Colores disponibles</strong></legend>
-				@foreach ($colores as $color)	
-					<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?=$color->color?>" id="<?=$color->color?>">
-						<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?>" ></i>
-					</label>									
-				@endforeach		
+			<div >
+				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
+					<h3>Colores disponibles</h3>
+				</div>
+				<div class="col-md-12 text-center">
+					<br>
+					@foreach ($colores as $color)	
+						<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?=$color->color?>" id="<?=$color->color?>">
+							<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?>" ></i>
+						</label>									
+					@endforeach
+				</div>		
 			</div>			
 			<br><br>
 			<div class="text-center">				
-				<div class="col-md-12 text-center" id="descripcion">
-					<legend><strong>Descripción</strong></legend>
-					<small>{{ $articulo->descripcion }}</small>
+				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+					<h3>Descripción</h3>
 				</div>
-				<br> 
-		  		<div class="col-md-12 text-center" id="descripcion">
-		  			<legend><strong>Categoria</strong></legend>
-		  			<small>{{ $articulo->categoria }}</small>
+				<small>{{ $articulo->descripcion }}</small>
+				<br><br>
+		  		<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+		  			<h3>Categoría</h3>
 		  		</div>
-				<br>
-				<div class="col-md-12 text-center" id="descripcion">
-					<legend><strong>Subcategoria</strong></legend>
-					<small>{{ $articulo->subcategoria }}</small>
+		  		<small>{{ $articulo->categoria }}</small>
+				<br><br>
+				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+					<h3>Subcategoría</h3>
 				</div>
-				<br>
-				<div class="col-md-12 text-center" id="descripcion">
-					<legend><strong>Medidas</strong></legend>
-					<small>{{ $articulo->largo }} x {{ $articulo->ancho }} x {{ $articulo->alto}}</small>
+				<small>{{ $articulo->subcategoria }}</small>
+				<br><br>
+				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+					<h3>Medidas</h3>
 				</div>
-				<br>
-				<div class="col-md-12 text-center" id="descripcion">
-					<legend><strong>Precio</strong></legend>
-					<small>${{ $articulo->precio_publico }} c/u</small>
+				<small>{{ $articulo->largo }} x {{ $articulo->ancho }} x {{ $articulo->alto}}</small>
+				<br><br>
+				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+					<h3>Precio</h3>
 				</div>		  
-				<br>
+				<small>${{ round($articulo->precio_publico, 2) }} c/u</small>
+				<br><br>
 			</div>	
 			
 		</div>

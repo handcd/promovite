@@ -107,7 +107,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0 pull-right" role="search" action="{{ url('/searchredirect') }}">
         <center>
-        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Ingrese un modelo" name="search" id="search">
+        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Ingrese un modelo o subcategóría" name="search" id="search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
         </center>
       </form>

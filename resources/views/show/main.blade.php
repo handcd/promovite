@@ -35,9 +35,13 @@
       margin: 4px 4px;
       cursor: pointer;
     }
-    
+    .fa-heart:before {
+      color: #ff0000;
+    }
 </style>
 <body>
+	<br>
+	<img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}">
     @yield('articulo')
     <div class="col-md-12 text-center">
 		<label>Si desea cotizar ingrese la cantidad de artículos</label>
@@ -45,8 +49,18 @@
 		<br><br>
 		<span>El costo sería: </span> $<span id="spTotal"></span>
 		<br><br>
+		<label>O si lo desea, también puede mandar su cotización por correo electrónico</label>
+		<input type="email" id="correo" onchange="" />
 	</div>		
-		
+	<div class="footer">
+      <div class="col-md-12 text-center">
+        <div class="credits">
+          <br>
+          <h5 class="pull-left">
+          &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.</h5>
+         </div>
+      </div>
+  </div>
 </body>
 <script>
 	function sumar (valor) {
