@@ -37,7 +37,7 @@ class categoriasController extends Controller
     public function Nosotros(){
         //Título de la página
         $titulo = 'Nosotros';
-        return view('Nosotros',compact('titulo'));
+        return view('nosotros',compact('titulo'));
     }
     //Inicio
     public function index(){
