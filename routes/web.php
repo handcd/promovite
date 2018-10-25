@@ -19,7 +19,7 @@ Route::get('/searchredirect', function(){
     $route = "/search/$search";
     return redirect($route);
 });
-Route::get("/search/{search}", "HomeController@search");
+Route::get("/search/{search}", "categoriasController@search");
 //Todas las rutas de las categorias:(
 Route::get('/Escritura y mas','categoriasController@indexForEscrituraWinideas');
 Route::get('/Bolsas, maletas y textiles','categoriasController@indexForBolsasWinideas');
