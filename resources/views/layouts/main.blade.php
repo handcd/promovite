@@ -81,7 +81,7 @@
                   <li><a href="{{ url('/Oficina') }}">Oficina</a></li>
                   <li><a href="{{ url('/Kids') }}">Kids</a></li>
                   <li><a href="{{ url('/Tecnologia') }}">Tecnología</a></li>
-                  <li><a href="{{ url('/Llaveros, linternas y herramientas') }}">Llaveros, linternas y herrámientas</a></li>
+                  <li><a href="{{ url('/Llaveros, linternas y herramie') }}">Llaveros, linternas y herrámientas</a></li>
                   <li><a href="{{ url('/Salud y belleza') }}">Salud y belleza</a></li>
                   <li><a href="{{ url('/Bolsas, maletas y textiles') }}">Bolsas, maletas y textiles</a></li>
                   <li><a href="{{ url('/Tazas, termos y cilindros') }}">Tazas, termos y cilindros</a></li>
@@ -107,7 +107,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0 pull-right" role="search" action="{{ url('/searchredirect') }}">
         <center>
-        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Ingrese un modelo" name="search" id="search">
+        <input class="form-control mr-lg-2" type="text" style="width: 300px" placeholder="Ingrese un modelo o subcategóría" name="search" id="search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
         </center>
       </form>

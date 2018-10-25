@@ -35,9 +35,13 @@
       margin: 4px 4px;
       cursor: pointer;
     }
-    
+    .fa-heart:before {
+      color: #ff0000;
+    }
 </style>
 <body>
+	<br>
+	<img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}">
     @yield('articulo')
     <div class="col-md-12 text-center">
 		<label>Si desea cotizar ingrese la cantidad de artículos</label>
@@ -45,8 +49,18 @@
 		<br><br>
 		<span>El costo sería: </span> $<span id="spTotal"></span>
 		<br><br>
+		<label>O si lo desea, también puede mandar su cotización por correo electrónico</label>
+		<input type="email" id="correo" onchange="" />
 	</div>		
-		
+	<div class="footer">
+      <div class="col-md-12 text-center">
+        <div class="credits">
+          <br>
+          <h5 class="pull-left">
+          &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.</h5>
+         </div>
+      </div>
+  </div>
 </body>
 <script>
 	function sumar (valor) {
@@ -82,7 +96,7 @@
 		@if ($articulo->catalogo === 'PWD') 
 			for (var i = 1; i <= counter; i++) {
 				if (eval("color" + i).checked) {
-					if (eval("valueColor" + i) == 'BLANCO') {				
+					if (eval("valueColor" + i) == 'blanco') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_blanco_lrg.jpg') }}");
 					}else if (eval("valueColor" + i) == 'plata') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_plata_lrg.jpg') }}");
@@ -164,6 +178,8 @@
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_verdesolido_lrg.jpg') }}");
 					}else if (eval("valueColor" + i) == 'negrotransparente') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_negrotransparente_lrg.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_verde_lrg.jpg') }}");
 					}
 				}
 			}
@@ -252,6 +268,8 @@
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_verdesolido.jpg') }}");
 					}else if (eval("valueColor" + i) == 'negrotransparente') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_negrotransparente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_verde.jpg') }}");
 					}
 				}
 			}	

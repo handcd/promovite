@@ -2,14 +2,14 @@
 
 @section('content')
   <br><br><br><br>
-  <h3>Resultado de la búsqueda: {{$search}}</h3>
-  <br><br><br>
+  <h3>Resultado de la búsqueda: <i>{{$search}}</i></h3>
+  <br><br>
   @if (isset($message))
     <div class='bg-danger' style='padding: 20px'>
       {{$message}}
     </div>
   @else
-    <br><br><br>
+    
     <center>
     <div class="row">
       <div class="col-md-10 col-md-offset-1"> 
