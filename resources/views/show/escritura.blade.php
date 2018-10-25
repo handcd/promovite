@@ -17,7 +17,7 @@
 				@endif
 			</div>
 			<br><br>
-			<div >
+			<div>
 				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 					<h3>Colores disponibles</h3>
 				</div>
@@ -30,29 +30,29 @@
 					@endforeach
 				</div>		
 			</div>			
-			<br><br>
-			<div class="text-center">				
-				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+			<br><br><br>
+			<div class="text-center">			
+				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 					<h3>Descripción</h3>
 				</div>
 				<small>{{ $articulo->descripcion }}</small>
 				<br><br>
-		  		<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+		  		<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 		  			<h3>Categoría</h3>
 		  		</div>
 		  		<small>{{ $articulo->categoria }}</small>
 				<br><br>
-				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 					<h3>Subcategoría</h3>
 				</div>
 				<small>{{ $articulo->subcategoria }}</small>
 				<br><br>
-				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 					<h3>Medidas</h3>
 				</div>
 				<small>{{ $articulo->largo }} x {{ $articulo->ancho }} x {{ $articulo->alto}}</small>
 				<br><br>
-				<div class="col-md-10 col-md-offset-1 text-center text-white" style="background-color: #00aeef">
+				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 					<h3>Precio</h3>
 				</div>		  
 				<small>${{ round($articulo->precio_publico, 2) }} c/u</small>

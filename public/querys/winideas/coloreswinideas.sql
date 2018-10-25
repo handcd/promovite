@@ -986,7 +986,6 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1022, 'A2431', 'blanco')
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1023, 'A2431', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1024, 'A2432', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1025, 'A2432', 'blanco');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1026, 'A2433', 'verdeclaro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1027, 'A2433', 'rojo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1028, 'A2433', 'azul');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1029, 'A2433', 'amarillo');
@@ -1063,8 +1062,7 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1100, 'A2457', 'naranja'
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1101, 'A2457', 'azul');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1102, 'A2457', 'verdeclaro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1103, 'A2458', 'azul');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1104, 'A2458', 'rojo');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1105, 'A2458', 'negro');
+INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1104, 'A2458', 'gris');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1106, 'A2459', 'plata');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1107, 'A2459', 'rojo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1108, 'A2459', 'negro');
@@ -1306,7 +1304,6 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1353, 'BLT4961', 'verde'
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1354, 'BLT4964', 'azul');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1355, 'BLT4964', 'plata');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1356, 'BLT4964', 'negro');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1357, 'BLT4964', 'rojo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1358, 'BLT4964', 'verde');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1359, 'BM5977', 'rojo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1360, 'BM5977', 'blanco');
@@ -1345,7 +1342,6 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1396, 'BPL2034', 'verde'
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1398, 'BPL6962', 'naranja');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1399, 'BPL6962', 'azulcielo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1400, 'BPL6962', 'verde');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1401, 'BPL6962', 'rojo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1402, 'BPL7462', 'amarillo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1403, 'BPL7462', 'azul');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1404, 'BPL7462', 'rosa');
@@ -1529,7 +1525,6 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1585, 'JCU1389', 'verdec
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1586, 'JJ3045', 'unico');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1587, 'JLC1', 'gris');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1588, 'JTE1794', 'plata');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1589, 'K3035', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1591, 'KVI1261', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1592, 'LAM4291', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1593, 'LAM4967', 'rojo');

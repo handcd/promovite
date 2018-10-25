@@ -39,7 +39,7 @@ Route::get('/Bolsas, maletas y textiles/{id}', 'showController@showBolsas');
 Route::get('/Oficina/{id}', 'showController@showOficina');
 Route::get('/Kids/{id}', 'showController@showKids');
 Route::get('/Tecnologia/{id}', 'showController@showTecnologia');
-Route::get('/Llaveros, linternas y herramientas/{id}', 'showController@showLlaveros');
+Route::get('/Llaveros, linternas y herramie/{id}', 'showController@showLlaveros');
 Route::get('/Salud y belleza/{id}', 'showController@showSalud');
 Route::get('/Tazas, termos y cilindros/{id}', 'showController@showTazas');
 Route::get('/Hogar y estilo de vida/{id}', 'showController@showHogar');

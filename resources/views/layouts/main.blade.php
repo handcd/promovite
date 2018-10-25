@@ -81,7 +81,7 @@
                   <li><a href="{{ url('/Oficina') }}">Oficina</a></li>
                   <li><a href="{{ url('/Kids') }}">Kids</a></li>
                   <li><a href="{{ url('/Tecnologia') }}">Tecnología</a></li>
-                  <li><a href="{{ url('/Llaveros, linternas y herramientas') }}">Llaveros, linternas y herrámientas</a></li>
+                  <li><a href="{{ url('/Llaveros, linternas y herramie') }}">Llaveros, linternas y herrámientas</a></li>
                   <li><a href="{{ url('/Salud y belleza') }}">Salud y belleza</a></li>
                   <li><a href="{{ url('/Bolsas, maletas y textiles') }}">Bolsas, maletas y textiles</a></li>
                   <li><a href="{{ url('/Tazas, termos y cilindros') }}">Tazas, termos y cilindros</a></li>
