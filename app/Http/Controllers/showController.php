@@ -16,13 +16,14 @@ class showController extends Controller
         //Selecciona los colores para el articulo
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
         //primer color
+        //$colores = strtolower($colores1);
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
         })->first();
-        //return $articulo;
+        
         return view('show.escritura',compact('colores', 'articulo'));
     }
     public function showBolsas($id){ 

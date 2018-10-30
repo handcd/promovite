@@ -24,8 +24,8 @@
 				<div class="col-md-12 text-center">
 					<br>
 					@foreach ($colores as $color)	
-						<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?=$color->color?>" id="<?=$color->color?>">
-							<i class="fa fa-circle  fa-2x fa-lg <?=$color->color?>" ></i>
+						<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?=$color->color?>" id="<?= $color->color?>">
+							<i class="fa fa-circle  fa-2x fa-lg <?= $color ?>" ></i>
 						</label>									
 					@endforeach
 				</div>		
