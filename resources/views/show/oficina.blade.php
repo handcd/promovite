@@ -16,8 +16,8 @@
 					<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style="height: 150px; width: 150px; display: block;" class="zoom" id="imagen" /></center>
 				@endif
 			</div>
-			<br><br>
-			<div >
+			<br><br><br>
+			<div>
 				<div class="col-md-12 text-center text-white" style="background-color: #00aeef">
 					<h3>Colores disponibles</h3>
 				</div>
