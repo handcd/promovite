@@ -58,6 +58,18 @@ class categoriasController extends Controller
         //Retorno de variables a vista
         return view('categories.escritura',compact('escritura','titulo'));
     }
+    public function prueba(){
+         //Título de la página
+        $titulo = 'Escritura';
+        //Obtiene el primer registro y color de cada modelo
+        $colors = Colores::select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        //Join para juntar un color, modelo e información
+        $escritura = Articulos::where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
+            $join->on('articulos.modelo','=','colors.modelo');
+        })->get()->sortBy('subcategoria'); 
+        //Retorno de variables a vista
+        return view('categories.prueba',compact('escritura','titulo'));
+    }
     //Bolsas, maletas y textiles
     public function indexForBolsasWinideas(){
     	//Título de la página

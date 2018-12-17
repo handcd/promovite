@@ -33,6 +33,8 @@ Route::get('/Tazas, termos y cilindros','categoriasController@indexForTazasWinid
 Route::get('/Tecnologia','categoriasController@indexForTecnologiaWinideas');
 Route::get('/Viaje y recreacion','categoriasController@indexForViajeWinideas');
 
+Route::get('/prueba','categoriasController@prueba');
+
 //Rutas para mostrar articulos
 Route::get('/Escritura y mas/{id}', 'showController@showEscritura');
 Route::get('/Bolsas, maletas y textiles/{id}', 'showController@showBolsas');
