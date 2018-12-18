@@ -14,8 +14,8 @@
 	  	<p class="lead">Colores disponibles.</p>
 	  	<br>
 	  	@foreach ($colores as $color)	
-			<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?=$color->color?>" id="<?= $color->color?>">
-				<i class="fa fa-circle  fa-4x fa-lg <?= $color->color ?>" ></i>
+			<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?= strtolower($color->color) ?>" id="<?= strtolower($color->color) ?>">
+				<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" ></i>
 			</label>									
 		@endforeach
 	  	<hr class="my-4">
