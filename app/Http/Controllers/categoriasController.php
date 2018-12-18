@@ -23,7 +23,7 @@ class categoriasController extends Controller
         
         if (count($articulo) == 0){
             return View('search')
-            ->with('message', 'No hay resultados que mostrar :( Trata buscando el artículo sin el prefijo. EJ. PW-A2305 -> A2305')
+            ->with('message', 'No hay resultados que mostrar :( Trata buscando el artículo sin el prefijo.                   EJ. PW-A2305 -> A2305')
             ->with('search', $search)
             ->with('titulo','Búsqueda');
         } else{
@@ -57,18 +57,6 @@ class categoriasController extends Controller
         })->get()->sortBy('subcategoria'); 
         //Retorno de variables a vista
         return view('categories.escritura',compact('escritura','titulo'));
-    }
-    public function prueba(){
-         //Título de la página
-        $titulo = 'Escritura';
-        //Obtiene el primer registro y color de cada modelo
-        $colors = Colores::select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
-        //Join para juntar un color, modelo e información
-        $escritura = Articulos::where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
-            $join->on('articulos.modelo','=','colors.modelo');
-        })->get()->sortBy('subcategoria'); 
-        //Retorno de variables a vista
-        return view('categories.prueba',compact('escritura','titulo'));
     }
     //Bolsas, maletas y textiles
     public function indexForBolsasWinideas(){

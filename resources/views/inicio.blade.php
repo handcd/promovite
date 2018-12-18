@@ -57,25 +57,23 @@
   <div class="text-center">
     <b>NOVEDADES</b>
     <div class="row">
-      <div class="col-md-12">          
-          <div class="col-sm-4">                                                
+      <div class="col-md-4">                                                   
             <div class="card mb-4">
-              <h3 class="card-header text-white escritura"> TECNOLOGÍA </h3>  
-              <img src="{{ asset('img/landing/novedades2.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
+              <h3 class="card-header text-white winideas"> TECNOLOGÍA </h3>  
+              <img src="{{ asset('img/landing/novedades2.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />  
             </div>  
-          </div>
-          <div class="col-sm-4">                                                
+      </div>  
+      <div class="col-md-4">
             <div class="card mb-4">
-              <h3 class="card-header text-white escritura"> HOGAR </h3>  
+              <h3 class="card-header text-white winideas"> HOGAR </h3>  
               <img src="{{ asset('img/landing/novedades1.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />    
-            </div>  
-          </div>
-          <div class="col-sm-4">                                                
+            </div> 
+      </div>
+      <div class="col-md-4">
             <div class="card mb-4">
-              <h3 class="card-header text-white escritura"> OFICINA </h3> 
+              <h3 class="card-header text-white winideas"> OFICINA </h3> 
               <img src="{{ asset('img/landing/novedades3.png') }}" class="img-thumbnail" style="width: 100%; display: block;" />     
-            </div>  
-          </div>
+            </div>        
       </div>        
     </div>   
   </div>
@@ -105,17 +103,12 @@
     <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
     <div class="overlay">
       <div class="text">
-        <h5><strong>ESTAMOS PARA SERVIRLE, CONTÁCTENOS</strong></h5><br>
-        <a href="http://www.facebook.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-facebook"></i></a>
+        <h6><strong>ESTAMOS PARA SERVIRLE, CONTÁCTENOS</strong></h6><br>
+        <center><a href="http://www.facebook.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-facebook"></i></a>
         <a href="http://www..com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-linkedin"></i></a>
-        <a href="http://www.instagram.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-instagram"></i></a>
+        <a href="http://www.instagram.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-instagram"></i></a></center>
       </div>
     </div> 
-  </div> 
-  <div class="text-center">
-    Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez
-    <br>
-    Tel. 
   </div>
   <br><br><br>
 @endsection  

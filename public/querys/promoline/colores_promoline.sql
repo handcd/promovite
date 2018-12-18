@@ -1,5 +1,4 @@
 
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('PE40001LV', 'NEGRO');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('PE40003LV', 'NEGRO');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('PE51047PL', 'AMARILLO');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('PE51047PL', 'AZUL');

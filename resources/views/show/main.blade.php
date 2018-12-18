@@ -44,13 +44,11 @@
 	<img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}">
     @yield('articulo')
     <div class="col-md-12 text-center">
-		<label>Si desea cotizar ingrese la cantidad de artículos</label>
+		<h2>Si desea cotizar, ingrese la cantidad de artículos</h2>
 		<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
 		<br><br>
-		<span>El costo sería: </span> $<span id="spTotal"></span>
+		<h2>El costo sería: </span> $<span id="spTotal"></h2>
 		<br><br>
-		<label>O si lo desea, también puede mandar su cotización por correo electrónico</label>
-		<input type="email" id="correo" onchange="" />
 	</div>		
 	<div class="footer">
       <div class="col-md-12 text-center">
@@ -87,8 +85,8 @@
 	//Ciclo para crear variables con el valor del color presionado
 	@foreach ($colores as $color)
 		counter +=1;
-		eval("var color" + counter + "= document.getElementById('<?=$color->color?>')");
-		eval("var valueColor" + counter + "= document.getElementById('<?=$color->color?>').value");		
+		eval("var color" + counter + "= document.getElementById('<?= strtolower($color->color) ?>')");
+		eval("var valueColor" + counter + "= document.getElementById('<?= strtolower($color->color) ?>').value");		
 	@endforeach
 	//Evento para cambiar imagen dependiendo del color que se haya presionado
 	{{--@if ( $articulo->catalogo === 'PWD') {--}}
@@ -180,6 +178,99 @@
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_negrotransparente_lrg.jpg') }}");
 					}else if (eval("valueColor" + i) == 'verde') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_verde_lrg.jpg') }}");
+					}
+				}
+			}
+		@elseif($articulo->catalogo === 'PPM')
+			for (var i = 1; i <= counter; i++) {
+				if (eval("color" + i).checked) {
+					console.log('Hola mundo');
+					if (eval("valueColor" + i) == 'blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_BLANCO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'plata') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_PLATA.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negro') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_NEGRO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azul') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZUL.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ROJO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'amarillo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AMARILLO.jpg') }}");						
+					}else if (eval("valueColor" + i) == 'naranja') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_NARANJA.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulcielo' || eval("valueColor" + i) == 'azulclaro') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZULCIELO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'morado') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_MORADO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'lila') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_LILA.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rosa') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ROSA.jpg') }}");
+					}else if (eval("valueColor" + i) == 'humo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_HUMO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'transparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_TRANSPARENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdeclaro' || eval("valueColor" + i) == 'verdelimon') {			
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDECLARO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'gris') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_GRIS.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulcobalto') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZULCOBALTO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'amarillofosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AMARILLOFOSFORESCENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'naranjafosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_NARANJAFOSFORESCENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulfosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZULFOSFORESCENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rosafosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ROSAFOSFORESCENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdefosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDEFOSFORESCENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'beige') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_BEIGE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'oro') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ORO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'cafe') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_CAFE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'caferoble') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_CAFEROBLE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulpastel') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZULPASTEL.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulmarino') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZULMARINO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'vino') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VINO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojo-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ROJO-BLANCO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azul-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AZUL-BLANCO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negro-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_NEGRO-BLANCO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDE-BLANCO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojotransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ROJOTRANSPARENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojosolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_ROJOSOLIDO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negrosolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_NEGROSOLIDO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdetransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDETRANSPARENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'lilatransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_LILATRANSPARENTEe.jpg') }}");
+					}else if (eval("valueColor" + i) == 'lilasolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_LILASOLIDO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdesolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDESOLIDO.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negrotransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_NEGROTRANSPARENTE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDE.jpg') }}");
+					}else if (eval("valueColor" + i) == 'aqua') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_AQUA.jpg') }}");
 					}
 				}
 			}
