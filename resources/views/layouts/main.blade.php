@@ -55,10 +55,10 @@
     <div class="navbar-collapse collapse" id="navbarColor03" style="">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{{url('/')}}">Inicio</a>
+          <a class="nav-link" href="{{url('/')}}" style="padding-top: 29px;">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">Categorias</a>
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" style="padding-top: 29px;">Categorias</a>
                 <ul class="dropdown-menu" aria-labelledby="themes">
                     <li><a href="{{ url('/Escritura y mas') }}">Escritura</a></li>
                     <li><a href="{{ url('/Oficina') }}">Oficina</a></li>
@@ -74,7 +74,7 @@
                 </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
+          <a class="nav-link" href="{{url('/nosotros')}}" style="padding-top: 29px;">Nosotros</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" role="search" action="{{ url('/searchredirect') }}">

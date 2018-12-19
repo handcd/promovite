@@ -55,7 +55,7 @@
     	</h4>
   	</div>
   	<div class="col-sm-12 text-white" style="background-color: #00adef; height: 80px">
-  		<br><strong>ALGUNOS DE NUESTROS CLIENTES</strong>
+  		<br><center><strong>ALGUNOS DE NUESTROS CLIENTES</strong></center>
   	</div>
   	<br>
   	<div class="row">
@@ -73,7 +73,7 @@
   	<div class=" container text-white" style="width: 100%">
       <img src="{{ asset('img/landing/contacto.jpg') }}" class="image">
       <div class="overlay">
-        <div class="text">
+        <div class="text text-center">
           <h5>ESTAMOS PARA SERVIRLE, CONTÁCTENOS</h5><br>
           <a href="http://www.facebook.com/promovite" class="btn btn-outline-primary text-white" ><i class="fab fa-facebook"></i></a>
           <a href="#" class="btn btn-outline-primary text-white" ><i class="fab fa-linkedin"></i></a>
@@ -81,11 +81,5 @@
         </div>
       </div> 
    	</div> 
-  	<br><br>
-  	<div class="text-center">
-  		Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez
-  		<br>
-  		Tel. 
-  	</div>
   	<br><br><br>
 @endsection 
