@@ -6,13 +6,11 @@
       position: relative;
       width: 100%;
     }
-
     .image {
       display: block;
       width: 100%;
       height: auto;
     }
-
     .overlay {
       position: absolute;
       bottom: 100%;
@@ -23,12 +21,10 @@
       height:0;
       transition: .5s ease;
     }
-
     .container:hover .overlay {
       bottom: 0;
       height: 100%;
     }
-
     .text {
       white-space: nowrap; 
       color: white;
@@ -111,4 +107,4 @@
     </div> 
   </div>
   <br><br><br>
-@endsection  
+@endsection 

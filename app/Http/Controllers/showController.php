@@ -23,6 +23,8 @@ class showController extends Controller
             $join->on('articulos.modelo','=','colors.modelo');
         })->first();
         
+        
+
         return view('show.escritura',compact('colores', 'articulo'));
     }
     public function showBolsas($id){ 
@@ -38,6 +40,7 @@ class showController extends Controller
             $join->on('articulos.modelo','=','colors.modelo');
         })->first();
         //return $articulo;
+        
         return view('show.bolsas_maletas_textiles',compact('colores', 'articulo'));
     }
     public function showOficina($id){ 

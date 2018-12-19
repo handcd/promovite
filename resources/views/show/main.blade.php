@@ -69,7 +69,11 @@
 	    total = (total == null || total == undefined || total == "" || total !== 0) ? 0 : total;
 		
 	    /* Esta es la suma. */
-	    total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
+	    @if ($articulo->catalogo === 'PPM') 
+	    	total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.15)?>;
+	    @else
+	    	total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
+	    @endif
 		var costo = total.toFixed(2);
 	    // Colocar el resultado de la suma en el control "span".
 	    document.getElementById('spTotal').innerHTML = costo;

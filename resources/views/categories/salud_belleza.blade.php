@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-  <br>
+  <br><br><br><br><br>
   <center>
     <div class="alert alert-dismissible alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -27,9 +27,15 @@
                 <div class="card-body">
                   <p class="card-text"> {{$informacion->descripcion }}</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
-                </ul>
+                 @if($informacion->catalogo === 'PPM')
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.15), 2) }}</li>
+                  </ul>
+                @else
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
+                  </ul>
+                @endif
               @endif
             </div>   
             </a>

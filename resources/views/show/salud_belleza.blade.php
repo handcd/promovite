@@ -28,7 +28,11 @@
 	  	<hr class="my-4">
 	  	<p>Medidas: {{ $articulo->largo }} x {{ $articulo->ancho }} x {{ $articulo->alto}}</p>
 	  	<hr class="my-4">
-		<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
+		@if($articulo->catalogo === 'PPM')
+			<p>Precio: $ {{ round(($articulo->precio_distribuidor*1.15), 2) }} </p>
+		@else
+			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
+		@endif
 	</div>
 	
 @endsection

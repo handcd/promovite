@@ -171,7 +171,7 @@ sup {
 }
 
 a {
-  color: #000000;
+  color: #008cba;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -179,6 +179,7 @@ a {
 
 a:hover {
   color: #00526e;
+  text-decoration: underline;
 }
 
 a:not([href]):not([tabindex]) {
@@ -4224,7 +4225,7 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4237,6 +4238,9 @@ input[type="button"].btn-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem 1rem;
+  z-index: 200;
+  top: 0;
+  width: 100%;
 }
 
 .navbar > .container,
