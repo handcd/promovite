@@ -1,7 +1,7 @@
 @extends('show.main')
 @section('articulo')
 	
-	<div class="jumbotron text-center">
+	<div class="jumbotron text-center" style="background-color: white;padding-top: 40px;padding-bottom: 40px;margin-bottom: 0px;">
 	  	<h1 class="display-3 text-center">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
 	  	<div class="col-md-12 zoom">
 			@if( $articulo->catalogo === 'PWD')  

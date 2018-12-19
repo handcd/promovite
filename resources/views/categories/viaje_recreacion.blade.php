@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-  <br><br><br><br>
+  <br>
   <center>
     <div class="alert alert-dismissible alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -22,7 +22,7 @@
                   <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
                 </ul>
               @else
-                <h4 class="card-header text-white promoopcion ">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }} </h4>  
+                <h4 class="card-header text-white winideas ">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }} </h4>  
                 <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="height: 200px; width: 100%; display: block;">
                 <div class="card-body">
                   <p class="card-text"> {{$informacion->descripcion }}</p>

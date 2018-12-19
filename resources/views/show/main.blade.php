@@ -46,9 +46,7 @@
     <div class="col-md-12 text-center">
 		<h2>Si desea cotizar, ingrese la cantidad de artículos</h2>
 		<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
-		<br><br>
 		<h2>El costo sería: </span> $<span id="spTotal"></h2>
-		<br><br>
 	</div>		
 	<div class="footer">
       <div class="col-md-12 text-center">
