@@ -1,10 +1,4 @@
 @extends('layouts.main')
-<style type="text/css">
-  div .col-md-3 {
-    max-height:600px;overflow:auto;
-    min-height: 600px;
-  }
-</style>
 @section('content')
   <br><br><br><br><br>
   <center>
