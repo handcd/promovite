@@ -42,11 +42,13 @@
       bottom:0;      
       margin-bottom: 3rem;
     }
-
+    .fondo{
+      background-image: url(img/fondo.jpg);
+    }
   </style> 
   
 </head>
-<body>
+<body class="fondo">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation" >
@@ -98,12 +100,14 @@
          </div>
       </div>
   </div>
-  <div class="barra">
-      <div class="text-center">
-        <h5>Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez 
-Tel. 55452199</h5>
-      </div>
-  </div>
+  @if($titulo !== 'Bienvenido')
+    <div class="barra">
+        <div class="text-center">
+          <h5>Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez 
+  Tel. 55452199</h5>
+        </div>
+    </div>
+  @endif
   
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
