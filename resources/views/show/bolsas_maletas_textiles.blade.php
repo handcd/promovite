@@ -19,7 +19,7 @@
 			</label>									
 		@endforeach
 	  	<hr class="my-4">
-	  	<p>{{ $articulo->descripcion }}</p>
+	  	<p>{{ strtoupper($articulo->descripcion) }}</p>
 	  	<hr class="my-4">
 	  	<p>Categoría: {{ $articulo->categoria }}</p>
 	  	<p class="lead">

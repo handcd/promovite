@@ -16,7 +16,7 @@
                  <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
                 <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'_lrg.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
                 <div class="card-body">
-                  <p class="card-text"> {{$informacion->descripcion }}</p>
+                  <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
@@ -25,7 +25,7 @@
                 <h4 class="card-header text-white winideas ">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }} </h4>  
                 <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="max-height: 300px; display: block;">
                 <div class="card-body">
-                  <p class="card-text"> {{$informacion->descripcion }}</p>
+                  <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                  @if($informacion->catalogo === 'PPM')
                   <ul class="list-group list-group-flush">

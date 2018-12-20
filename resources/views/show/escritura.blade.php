@@ -1,8 +1,18 @@
 @extends('show.main')
+<style type="text/css">
+	h1{
+	  position: relative;
+      top: 0px;
+      padding-bottom: 50px;
+      width: 100%;
+      height: 40px;
+      z-index: 200;
+      background-color: white;
+  	}
+</style>
 @section('articulo')
-	
 	<div class="jumbotron text-center" style="background-color: white;padding-top: 40px;padding-bottom: 40px;margin-bottom: 0px;">
-	  	<h1 class="display-3 text-center">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
+	  	<h1 class="display-3 ">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
 	  	<div class="col-md-12 zoom">
 			@if( $articulo->catalogo === 'PWD')  
 				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
@@ -19,7 +29,7 @@
 			</label>									
 		@endforeach
 	  	<hr class="my-4">
-	  	<p>{{ $articulo->descripcion }}</p>
+	  	<p>{{ strtoupper($articulo->descripcion) }}</p>
 	  	<hr class="my-4">
 	  	<p>Categoría: {{ $articulo->categoria }}</p>
 	  	<p class="lead">

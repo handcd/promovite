@@ -43,7 +43,9 @@
       margin-bottom: 3rem;
     }
     .fondo{
-      background-image: url(img/fondo.jpg);
+      background-image: url(img/fondo4.jpg);
+      height: 100%;
+      width: 100%;
     }
   </style> 
   
