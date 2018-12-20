@@ -182,7 +182,7 @@ INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-09-19', 'verde');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-11-19', 'negro');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-12-19', 'oso');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-12-19', 'elefante');
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-12-19-leo', 'cafe');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-12-19', 'cafe');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-18-19', 'azul');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-18-19', 'naranja');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('FOR-18-19', 'negro');
@@ -263,7 +263,7 @@ INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-26-19', 'metal');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-27-19', 'metal');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-28-19', 'plata');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-29-19', 'metal');
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-30-19', 'metal')
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-30-19', 'metal');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-31-19', 'golf');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-31-19', 'soccer');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('LLA-32-19', 'metal');
