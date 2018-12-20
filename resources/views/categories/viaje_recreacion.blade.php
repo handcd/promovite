@@ -14,7 +14,7 @@
             <div class="card mb-3">
               @if( $informacion->catalogo === 'PWD')
                  <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
-                <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'_lrg.jpg') }}" alt="Imagen no disponible" style="display: block;">
+                <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'_lrg.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
                 <div class="card-body">
                   <p class="card-text"> {{$informacion->descripcion }}</p>
                 </div>
