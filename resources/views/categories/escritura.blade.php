@@ -1,4 +1,10 @@
 @extends('layouts.main')
+<style type="text/css">
+  div .col-md-3 {
+    max-height:600px;overflow:auto;
+    min-height: 600px;
+  }
+</style>
 @section('content')
   <br><br><br><br><br>
   <center>
@@ -14,7 +20,7 @@
             <div class="card mb-3">
               @if( $informacion->catalogo === 'PWD')
                  <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
-                <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'_lrg.jpg') }}" alt="Imagen no disponible" style="height: 200px; width: 100%; display: block;">
+                <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'_lrg.jpg') }}" alt="Imagen no disponible" style="display: block;">
                 <div class="card-body">
                   <p class="card-text"> {{$informacion->descripcion }}</p>
                 </div>
@@ -23,7 +29,7 @@
                 </ul>
               @else
                 <h4 class="card-header text-white winideas ">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }} </h4>  
-                <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="height: 200px; width: 100%; display: block;">
+                <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="display: block; max-height: 300px">
                 <div class="card-body">
                   <p class="card-text"> {{$informacion->descripcion }}</p>
                 </div>
@@ -43,5 +49,4 @@
         @endforeach       
     </div>    
   </center>
- 
 @endsection

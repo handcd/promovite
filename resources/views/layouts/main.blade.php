@@ -101,7 +101,7 @@
   <div class="barra">
       <div class="text-center">
         <h5>Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez 
-Tel.</h5>
+Tel. 55452199</h5>
       </div>
   </div>
   
