@@ -1,4 +1,4 @@
-strtoupper(@extends('layouts.mai)n')
+@extends('layouts.main')
 @section('content')
   <br><br><br><br><br>
   <center>
