@@ -38,6 +38,15 @@
     .fa-heart:before {
       color: #ff0000;
     }
+	h1{
+	  position: relative;
+      top: 0px;
+      padding-bottom: 50px;
+      width: 100%;
+      height: 40px;
+      z-index: 200;
+      background-color: white;
+  	}
 </style>
 <body>
 	<br>

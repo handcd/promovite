@@ -18,12 +18,13 @@ class categoriasController extends Controller
                     ->joinSub($colors,'colors',function ($join){
                         $join->on('articulos.modelo','=','colors.modelo');
                     })
-                    ->orWhere('articulos.subcategoria', 'LIKE', '%'.$search.'%')->get();
+                    ->orWhere('articulos.subcategoria', 'LIKE', '%'.$search.'%')
+                    ->orWhere('articulos.catalogo','LIKE', '%'.$search.'%')->get();
 
         
         if (count($articulo) == 0){
             return View('search')
-            ->with('message', 'No hay resultados que mostrar :( Trata buscando el artículo sin el prefijo.                   EJ. PW-A2305 -> A2305')
+            ->with('message', 'No hay resultados que mostrar :( Inténtalo de nuevo o consulta a tu agente de ventas')
             ->with('search', $search)
             ->with('titulo','Búsqueda');
         } else{
