@@ -195,7 +195,6 @@
 		@elseif($articulo->catalogo === 'PPM')
 			for (var i = 1; i <= counter; i++) {
 				if (eval("color" + i).checked) {
-					console.log('Hola mundo');
 					if (eval("valueColor" + i) == 'blanco') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_BLANCO.jpg') }}");
 					}else if (eval("valueColor" + i) == 'plata') {				
@@ -224,7 +223,7 @@
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_HUMO.jpg') }}");
 					}else if (eval("valueColor" + i) == 'transparente') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_TRANSPARENTE.jpg') }}");
-					}else if (eval("valueColor" + i) == 'verdeclaro' || eval("valueColor" + i) == 'verdelimon') {			
+					}else if (eval("valueColor" + i) == 'verdeclaro' || eval("valueColor" + i) == 'verdelimon') {		
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDECLARO.jpg') }}");
 					}else if (eval("valueColor" + i) == 'gris') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_GRIS.jpg') }}");
@@ -271,7 +270,7 @@
 					}else if (eval("valueColor" + i) == 'verdetransparente') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_VERDETRANSPARENTE.jpg') }}");
 					}else if (eval("valueColor" + i) == 'lilatransparente') {				
-						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_LILATRANSPARENTEe.jpg') }}");
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_LILATRANSPARENTE.jpg') }}");
 					}else if (eval("valueColor" + i) == 'lilasolido') {				
 						$("#imagen").attr("src", "{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_LILASOLIDO.jpg') }}");
 					}else if (eval("valueColor" + i) == 'verdesolido') {				
@@ -377,9 +376,6 @@
 			}	
 		@endif
 	}
-	/*}else{
-		console.log('tu mamá');
-	}	*/
 	//Asignación de eventos a cada bolita de color
 	for (var i =  1; i <= counter; i++) {
 		eval("color" + i).addEventListener('click', function () {

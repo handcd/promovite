@@ -19,7 +19,8 @@ strtoupper(@extends('layouts.main')
                   <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
+                  <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_distribuidor, 2) }}</li>
+                  <li class="list-group-item">Precio unitario: $  {{ round(1.18 * (0.79 * $informacion->precio_distribuidor),2) }}</li>
                 </ul>
               @elseif($informacion->catalogo === 'PMD')
                 <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  

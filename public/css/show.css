@@ -25,7 +25,7 @@
     .naranja:before {
         color: orange;
     }
-    .azulcielo, .azulclaro:before {
+    .azulcielo:before, .azulclaro:before {
         color: #00BFFF;
     }
     .morado:before {
@@ -38,10 +38,14 @@
         color: pink;
     }
     .humo:before {
-        
+        color: #352b2bc4;
     }
     .transparente:before {
-        background-image: url(/home/pablo/Proyectos/promovite/public/img/colores/transparente.png);
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/transparente.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;
     }
     .verdeclaro, .verdelimon:before {
         color: #00cc00;
@@ -86,19 +90,39 @@
         color: #800004;
     }
     .rojo-blanco:before {
-        
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/rojoblanco.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;        
     }
     .azul-blanco:before {
-        
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/azulblanco.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;
     }
     .negro-blanco:before {
-        
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/negroblanco.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px; 
     }
     .verde-blanco:before {
-        
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/verdeblanco.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;
     }
     .rojotransparente:before {
-        color: red;
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/rojotransparente.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;
     }
     .rojosolido:before {
         color: #e00000;
@@ -119,7 +143,11 @@
         color: #009900;
     }
     .negrotransparente:before {
-        
+        color: rgba(255,255,255,0);
+        background-image: url("/img/colores/negrotransparente.png");
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;
     }
     
 /* Estilo para zoom */
