@@ -55,9 +55,9 @@
 			<black><p>Consultar el precio con su agente de ventas </p></black>
 		{{-- CDO --}}
 		@elseif($articulo->catalogo === 'PCD')
-			<black><p> Precio: ${{ round(($informacion->precio_distribuidor*1.13), 2) }}</p></black>
+			<black><p> Precio: ${{ round(($articulo->precio_distribuidor*1.13), 2) }}</p></black>
 		@elseif($articulo->catalogo === 'PWD')
-			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $informacion->precio_distribuidor),2) }}</p></black>
+			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
 		@endif
