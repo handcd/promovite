@@ -19,6 +19,10 @@
 	<title>Promovite | {{ $articulo->descripcion }}</title>
 	<link rel="apple-touch-icon" sizes="76x76" href="{{ url('img/promovite-icon.png') }}" />
   	<link rel="icon" type="image/png" href="{{ url('img/promovite-icon.png') }}" />
+
+  	{{-- search console --}}
+  	<meta name="google-site-verification" content="XTDJlOeAKLqNatKgSShFBMCD4oeSCNl0sUNiKmJTxpk" />
+  	
   	
 </head>
 <style type="text/css">
@@ -52,11 +56,13 @@
 	<br>
 	<img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}">
     @yield('articulo')
-    <div class="col-md-12 text-center">
-		<h2>Si desea cotizar, ingrese la cantidad de artículos</h2>
-		<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
-		<h2>El costo sería: </span> $<span id="spTotal"></h2>
-	</div>		
+    @if($articulo->catalogo != 'PPF')
+	    <div class="col-md-12 text-center">
+			<h2>Si desea cotizar, ingrese la cantidad de artículos</h2>
+			<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
+			<h2>El costo sería: </span> $<span id="spTotal"></h2>
+		</div>
+	@endif		
 	<div class="footer">
       <div class="col-md-12 text-center">
         <div class="credits">
@@ -78,8 +84,12 @@
 	    total = (total == null || total == undefined || total == "" || total !== 0) ? 0 : total;
 		
 	    /* Esta es la suma. */
-	    @if ($articulo->catalogo === 'PPM') 
+	    @if ($articulo->catalogo === 'PPM' || $articulo->catalogo === 'PIN') 
 	    	total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.15)?>;
+	    @elseif ($articulo->catalogo === 'PCD') 
+	    	total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.13)?>;
+	    @elseif ($articulo->catalogo === 'PWD') 
+	    	total = (parseInt(total) + parseInt(valor))* <?=(1.18 * (0.79 * $articulo->precio_distribuidor))?>;
 	    @else
 	    	total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
 	    @endif

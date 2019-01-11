@@ -1,4 +1,4 @@
-strtoupper(@extends('layouts.main')
+@extends('layouts.main')
 @section('content')
   <br><br><br><br><br>
   <center>
@@ -19,8 +19,20 @@ strtoupper(@extends('layouts.main')
                   <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_distribuidor, 2) }}</li>
                   <li class="list-group-item">Precio unitario: $  {{ round(1.18 * (0.79 * $informacion->precio_distribuidor),2) }}</li>
+                </ul>
+              @elseif($informacion->catalogo === 'PPF')
+                <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
+                @if($informacion->codigo_color == NULL && $informacion->color == NULL || $informacion->codigo_color > 30)
+                  <img src="{{ asset('img/'.$informacion->catalogo.'/'.$informacion->modelo.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
+                @else
+                  <img src="{{ asset('img/'.$informacion->catalogo.'/'.$informacion->modelo.'-'.$informacion->codigo_color.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
+                @endif               
+                <div class="card-body">
+                  <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Consultar el precio con su agente de ventas</li>
                 </ul>
               @elseif($informacion->catalogo === 'PMD')
                 <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -37,9 +49,13 @@ strtoupper(@extends('layouts.main')
                 <div class="card-body">
                   <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
-                @if($informacion->catalogo === 'PPM')
+                @if($informacion->catalogo === 'PPM' || $informacion->catalogo === 'PIN')
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.15), 2) }}</li>
+                  </ul>
+                @elseif($informacion->catalogo === 'PCD')
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.13), 2) }}</li>
                   </ul>
                 @else
                   <ul class="list-group list-group-flush">

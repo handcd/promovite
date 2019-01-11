@@ -7,6 +7,13 @@
 				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 			@elseif($articulo->catalogo === 'PMD')
                 <center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'-'.$articulo->color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+            @elseif($articulo->catalogo === 'PPF')
+            	@if($articulo->codigo_color == NULL && $articulo->color == NULL)
+                  <center><img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+                @else
+                  <center><img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'-'.$articulo->codigo_color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+                @endif  
+                
 			@else
 				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style=" max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 			@endif
@@ -16,25 +23,41 @@
 	  	<br>
 	  	@if($articulo->catalogo === 'PMD')
 	  		<p>Único disponible</p>
+	  	@elseif($articulo->catalogo === 'PPF')
+	  		@foreach ($colores as $color)	
+					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="cursor: default;" ></i>
+			@endforeach
+			<br><br>
+			<small>Bolitas únicamente decorativas</small>
 	  	@else
 		  	@foreach ($colores as $color)	
 				<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?= strtolower($color->color) ?>" id="<?= strtolower($color->color) ?>">
-					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" ></i>
+					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="padding-bottom: 10px;"></i>
 				</label>									
 			@endforeach
 		@endif
 	  	<hr class="my-4">
 	  	<p>{{ strtoupper($articulo->descripcion) }}</p>
 	  	<hr class="my-4">
-	  	<p>Categoría: {{ $articulo->categoria }}</p>
+	  	<p>Categoría: {{ strtoupper($articulo->categoria) }}</p>
 	  	<p class="lead">
 	  	<hr class="my-4">
-	  	<p>Subcategoría: {{ $articulo->subcategoria }}</p>
+	  	<p>Subcategoría: {{ strtoupper($articulo->subcategoria) }}</p>
 	  	<hr class="my-4">
 	  	<p>Medidas: {{ $articulo->largo }} x {{ $articulo->ancho }} x {{ $articulo->alto}}</p>
+	  	{{-- Precios --}}
 	  	<hr class="my-4">
-		@if($articulo->catalogo === 'PPM')
+	  	{{-- Promoline --}}
+		@if($articulo->catalogo === 'PPM' || $articulo->catalogo === 'PIN')
 			<p>Precio: $ {{ round(($articulo->precio_distribuidor*1.15), 2) }} </p>
+		{{-- Promofactory --}}
+		@elseif($articulo->catalogo === 'PPF')
+			<black><p>Consultar el precio con su agente de ventas </p></black>
+		{{-- CDO --}}
+		@elseif($articulo->catalogo === 'PCD')
+			<black><p> Precio: ${{ round(($informacion->precio_distribuidor*1.13), 2) }}</p></black>
+		@elseif($articulo->catalogo === 'PWD')
+			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $informacion->precio_distribuidor),2) }}</p></black>
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
 		@endif
