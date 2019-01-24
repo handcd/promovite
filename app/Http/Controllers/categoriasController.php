@@ -66,7 +66,7 @@ class categoriasController extends Controller
     	//Título de la página
         $titulo = 'Bolsas, maletas y textiles';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $bolsas = DB::table('articulos')->where('categoria','Bolsas, maletas y textiles')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -79,7 +79,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Oficina';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $oficina = DB::table('articulos')->where('categoria','Oficina')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -93,7 +93,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Kids';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $kids = DB::table('articulos')->where('categoria','Kids')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -106,7 +106,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Tecnología';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $tecnologia = DB::table('articulos')->where('categoria','tecnologia')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -119,7 +119,7 @@ class categoriasController extends Controller
        //Título de la página
         $titulo = 'Llaveros, linternas y herramientas';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $linternas = DB::table('articulos')->where('categoria','Llaveros, linternas y herramie')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -132,7 +132,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Salud y belleza';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $salud = DB::table('articulos')->where('categoria','Salud y belleza')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -145,7 +145,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Tazas, termos y cilindros';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $tazas = DB::table('articulos')->where('categoria','Tazas, termos y cilindros')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -158,7 +158,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Hogar y estilo de vida';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $hogar = DB::table('articulos')->where('categoria','Hogar y estilo de vida')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -171,7 +171,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Sublimación';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $sublimacion = DB::table('articulos')->where('categoria','sublimacion')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -184,7 +184,7 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Viaje y recreación';
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $viaje = DB::table('articulos')->where('categoria','Viaje y recreacion')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');

@@ -23,7 +23,7 @@
                 </ul>
               @elseif($informacion->catalogo === 'PPF')
                 <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
-                @if($informacion->codigo_color == NULL && $informacion->color == NULL || $informacion->codigo_color > 30)
+                @if($informacion->codigo_color == NULL && $informacion->color == NULL)
                   <img src="{{ asset('img/'.$informacion->catalogo.'/'.$informacion->modelo.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
                 @else
                   <img src="{{ asset('img/'.$informacion->catalogo.'/'.$informacion->modelo.'-'.$informacion->codigo_color.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
