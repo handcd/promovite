@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta name="google-site-verification" content="XTDJlOeAKLqNatKgSShFBMCD4oeSCNl0sUNiKmJTxpk" />
 </head>
 <body>
     <div id="app">

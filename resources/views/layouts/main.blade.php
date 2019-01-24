@@ -10,6 +10,8 @@
   <title>Promovite | {{ $titulo }} </title>
   <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  {{-- Search console --}}
+  <meta name="google-site-verification" content="XTDJlOeAKLqNatKgSShFBMCD4oeSCNl0sUNiKmJTxpk" />
 
   <style type="text/css">
     .fa-heart:before {

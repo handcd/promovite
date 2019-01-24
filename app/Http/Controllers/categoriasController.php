@@ -15,6 +15,7 @@ class categoriasController extends Controller
         $colors = Colores::select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
         $articulo = Articulos::select()
                     ->where('articulos.modelo', 'LIKE', '%'.$search.'%')
+                    ->orWhere(DB::raw("CONCAT(articulos.catalogo,'-',articulos.modelo)"), 'like', '%'.$search.'%')
                     ->joinSub($colors,'colors',function ($join){
                         $join->on('articulos.modelo','=','colors.modelo');
                     })
@@ -51,11 +52,12 @@ class categoriasController extends Controller
         //Título de la página
         $titulo = 'Escritura';
         //Obtiene el primer registro y color de cada modelo
-        $colors = Colores::select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = Colores::select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color '))->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $escritura = Articulos::where('categoria','Escritura y mas')->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->get()->sortBy('subcategoria'); 
+        })->get()->sortBy('subcategoria');
+        //return $escritura;
         //Retorno de variables a vista
         return view('categories.escritura',compact('escritura','titulo'));
     }

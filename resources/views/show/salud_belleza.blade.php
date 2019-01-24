@@ -20,7 +20,7 @@
 	  	@else
 		  	@foreach ($colores as $color)	
 				<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?= strtolower($color->color) ?>" id="<?= strtolower($color->color) ?>">
-					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" ></i>
+					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="padding-bottom: 10px;"></i>
 				</label>									
 			@endforeach
 		@endif	
@@ -33,9 +33,19 @@
 	  	<p>Subcategoría: {{ $articulo->subcategoria }}</p>
 	  	<hr class="my-4">
 	  	<p>Medidas: {{ $articulo->largo }} x {{ $articulo->ancho }} x {{ $articulo->alto}}</p>
+	  	{{-- Precios --}}
 	  	<hr class="my-4">
-		@if($articulo->catalogo === 'PPM')
+	  	{{-- Promoline --}}
+		@if($articulo->catalogo === 'PPM' || $articulo->catalogo === 'PIN')
 			<p>Precio: $ {{ round(($articulo->precio_distribuidor*1.15), 2) }} </p>
+		{{-- Promofactory --}}
+		@elseif($articulo->catalogo === 'PPF')
+			<black><p>Consultar el precio con su agente de ventas </p></black>
+		{{-- CDO --}}
+		@elseif($articulo->catalogo === 'PCD')
+			<black><p> Precio: ${{ round(($articulo->precio_distribuidor*1.13), 2) }}</p></black>
+		@elseif($articulo->catalogo === 'PWD')
+			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
 		@endif
