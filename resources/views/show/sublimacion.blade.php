@@ -46,6 +46,10 @@ articulo@extends('show.main')
 			<black><p> Precio: ${{ round(($articulo->precio_distribuidor*1.13), 2) }}</p></black>
 		@elseif($articulo->catalogo === 'PWD')
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
+		{{-- Promoopcion --}}
+		@elseif($articulo->catalogo === 'PPO')
+			<black><p> Precio unitario: $  {{ round((1.175 * $articulo->precio_distribuidor),2) }}</p></black>
+		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
 		@endif

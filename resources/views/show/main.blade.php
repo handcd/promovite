@@ -90,6 +90,12 @@
 	    	total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.13)?>;
 	    @elseif ($articulo->catalogo === 'PWD') 
 	    	total = (parseInt(total) + parseInt(valor))* <?=(1.18 * (0.79 * $articulo->precio_distribuidor))?>;
+	    @elseif ($articulo->catalogo === 'PPO') 
+	    	@if ($articulo->categoria === 'Tecnologia') 
+	    		total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.11)?>;
+	    	@else
+	    		total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.175)?>;
+	    	@endif
 	    @else
 	    	total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
 	    @endif

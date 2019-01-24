@@ -5,7 +5,7 @@
     <div class="alert alert-dismissible alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <h4 class="alert-heading">¡Hola!</h4>
-      <p class="mb-0">Estás en la sección {{$titulo}} y más</p>
+      <p class="mb-0">Estás en la sección {{$titulo}}</p>
     </div>
     <div class="row">
         @foreach ($tazas as $informacion)          
@@ -56,6 +56,10 @@
                 @elseif($informacion->catalogo === 'PCD')
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.13), 2) }}</li>
+                  </ul>
+                @elseif($informacion->catalogo === 'PPO')
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.175), 2) }}</li>
                   </ul>
                 @else
                   <ul class="list-group list-group-flush">

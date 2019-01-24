@@ -37,15 +37,20 @@
 	  	<hr class="my-4">
 	  	{{-- Promoline --}}
 		@if($articulo->catalogo === 'PPM' || $articulo->catalogo === 'PIN')
-			<p>Precio: $ {{ round(($articulo->precio_distribuidor*1.15), 2) }} </p>
+			<p>Precio: ${{ round(($articulo->precio_distribuidor*1.15), 2) }} </p>
 		{{-- Promofactory --}}
 		@elseif($articulo->catalogo === 'PPF')
 			<black><p>Consultar el precio con su agente de ventas </p></black>
 		{{-- CDO --}}
 		@elseif($articulo->catalogo === 'PCD')
 			<black><p> Precio: ${{ round(($articulo->precio_distribuidor*1.13), 2) }}</p></black>
+		{{-- Winideas--}}
 		@elseif($articulo->catalogo === 'PWD')
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
+		{{-- Promoopcion --}}
+		@elseif($articulo->catalogo === 'PPO')
+			<black><p> Precio unitario: $  {{ round((1.175 * $articulo->precio_distribuidor),2) }}</p></black>
+		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
 		@endif
