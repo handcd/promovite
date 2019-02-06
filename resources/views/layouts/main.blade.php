@@ -61,12 +61,12 @@
     <div class="navbar-collapse collapse" id="navbarColor03" style="">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{{url('/')}}" style="padding-top: 29px;">Inicio</a>
+          <a class="nav-link" href="{{url('/')}}" style="padding-top: 25px;">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" style="padding-top: 29px;">Categorias</a>
-                <ul class="dropdown-menu" aria-labelledby="themes">
-                    <li><a href="{{ url('/Escritura y mas') }}">Escritura</a></li>
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" style="padding-top: 25px;">Categorias</a>
+                <ul class="dropdown-menu" aria-labelledby="themes" style="background-color: white;">
+                    <li><a href="{{ url('/Escritura y mas') }}" >Escritura</a></li>
                     <li><a href="{{ url('/Oficina') }}">Oficina</a></li>
                     <li><a href="{{ url('/Kids') }}">Kids</a></li>
                     <li><a href="{{ url('/Tecnologia') }}">Tecnología</a></li>
@@ -80,7 +80,7 @@
                 </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/nosotros')}}" style="padding-top: 29px;">Nosotros</a>
+          <a class="nav-link" href="{{url('/nosotros')}}" style="padding-top: 25px;">Nosotros</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" role="search" action="{{ url('/searchredirect') }}">
@@ -96,22 +96,22 @@
     </section>
   </div>
   <br>
+  @if($titulo !== 'Bienvenido')
   <div class="footer">
     <div class="col-md-12 text-center">
-        <div class="credits">
-          <h6>
-          &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por<a href="http://handcd.com/">HAND Creative Design</a>.</h6>
-         </div>
+        <div class="credits" style="padding: 0px; height: 80px;">
+          <h6>Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez | Tel. 5545219956 | ventas@promovite.com.mx</h6>  
+        </div>
       </div>
   </div>
-  @if($titulo !== 'Bienvenido')
-    <div class="barra">
-        <div class="text-center">
-          <h5>Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez 
-  Tel. 55452199</h5>
-        </div>
-    </div>
   @endif
+  
+  <div class="barra">
+    <div class="text-center" style="padding-bottom: 80px;">          
+      <h6>
+        &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por<a href="http://handcd.com/">HAND Creative Design</a>.</h6>
+    </div>
+  </div>
   
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
