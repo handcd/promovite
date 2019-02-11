@@ -25,7 +25,7 @@
       width: 100%;
       height: 40px;
       z-index: 200;
-      background-color: white;
+      background-color: #eeeeee;
     }
     .winideas {
       background-color: #00aeef;
@@ -89,7 +89,13 @@
       </form>
     </div>
   </nav>
-  
+  <div class="footer">
+    <div class="col-md-12 text-center">
+      <div class="credits" style="padding: 0px; top: 41px; left: 0px;">
+        <h6><i class="fa fa-phone" alt="phone"></i> Tel. 5545219956 | <i class="fa fa-envelope" alt="envelope"></i> ventas@promovite.com.mx</h6>  
+      </div>    
+    </div>
+  </div>
   <div class="container">
     <section class="contenido">
       @yield('content')
@@ -97,22 +103,12 @@
   </div>
   <br>
   @if($titulo !== 'Bienvenido')
-  <div class="footer">
-    <div class="col-md-12 text-center">
-        <div class="credits" style="padding: 0px; height: 80px;">
-          <h6>Calle 23, #111, Col. San Pedro de los Pinos, CP. 03800, Ciudad de México, Benito Juárez | Tel. 5545219956 | ventas@promovite.com.mx</h6>  
-        </div>
-      </div>
-  </div>
-  @endif
-  
   <div class="barra">
-    <div class="text-center" style="padding-bottom: 80px;">          
-      <h6>
-        &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por<a href="http://handcd.com/">HAND Creative Design</a>.</h6>
+    <div class="text-center">          
+      <h6>&copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.</h6>
     </div>
   </div>
-  
+  @endif
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
