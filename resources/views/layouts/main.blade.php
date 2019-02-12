@@ -37,7 +37,7 @@
       background-color: #ffeeff;
     }
 
-    a{
+    a:link{
       text-decoration: none;
     }
     .barra{
@@ -53,30 +53,59 @@
   
 </head>
 <body class="fondo">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="footer">
+    <div class="col-md-12 text-center">
+      <div class="credits" style="padding: 0px; top: 0px; left: 0px; margin-top: 0px;">
+        <h6 style="margin-top: 8px;"><i class="fa fa-phone-volume" alt="phone"></i> Tel. 5545219956 | <i class="fa fa-envelope" alt="envelope"></i> ventas@promovite.com.mx</h6>  
+      </div>    
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="top: 40px;">
     <a class="navbar-brand" href="{{ url('/')}}"><img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse collapse" id="navbarColor03" style="">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="{{url('/')}}" style="padding-top: 25px;">Inicio</a>
         </li>
         <li class="nav-item dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" style="padding-top: 25px;">Categorias</a>
                 <ul class="dropdown-menu" aria-labelledby="themes" style="background-color: white;">
-                    <li><a href="{{ url('/Escritura y mas') }}" >Escritura</a></li>
-                    <li><a href="{{ url('/Oficina') }}">Oficina</a></li>
-                    <li><a href="{{ url('/Kids') }}">Kids</a></li>
-                    <li><a href="{{ url('/Tecnologia') }}">Tecnología</a></li>
-                    <li><a href="{{ url('/Llaveros, linternas y herramie') }}">Llaveros, linternas y herrámientas</a></li>
-                    <li><a href="{{ url('/Salud y belleza') }}">Salud y belleza</a></li>
-                    <li><a href="{{ url('/Bolsas, maletas y textiles') }}">Bolsas, maletas y textiles</a></li>
-                    <li><a href="{{ url('/Tazas, termos y cilindros') }}">Tazas, termos y cilindros</a></li>
-                    <li><a href="{{ url('/Hogar y estilo de vida') }}">Hogar y estilo de vida</a></li>
-                    <li><a href="{{ url('/Sublimacion') }}">Sublimación</a></li>
-                    <li><a href="{{ url('/Viaje y recreacion') }}">Viaje y recreación</a></li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Escritura y mas') }}" ><i class="far fa-edit"></i>  Escritura</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Oficina') }}"><i class="fa fa-briefcase"></i>  Oficina</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Kids') }}"><i class="fas fa-child"></i>  Kids</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Tecnologia') }}"><i class="fa fa-laptop"></i>  Tecnología</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Llaveros, linternas y herramie') }}"><i class="fa fa-tools"></i>  Llaveros, linternas y herrámientas</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Salud y belleza') }}"><i class="fa fa-briefcase-medical"></i>  Salud y belleza</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Bolsas, maletas y textiles') }}"><i class="fa fa-shopping-bag"></i>  Bolsas, maletas y textiles</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Tazas, termos y cilindros') }}"><i class="fas fa-mug-hot"></i>  Tazas, termos y cilindros</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Hogar y estilo de vida') }}"><i class="fa fa-home"></i>  Hogar y estilo de vida</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Sublimacion') }}"> <i class="fa fa-highlighter"></i>  Sublimación</a>
+                    </li>
+                    <li style="margin-left: 10px; margin-top: 3px;">
+                      <a href="{{ url('/Viaje y recreacion') }}"><i class="fa fa-plane-departure"></i>  Viaje y recreación</a>
+                    </li>
                 </ul>
         </li>
         <li class="nav-item">
@@ -89,13 +118,7 @@
       </form>
     </div>
   </nav>
-  <div class="footer">
-    <div class="col-md-12 text-center">
-      <div class="credits" style="padding: 0px; top: 41px; left: 0px;">
-        <h6><i class="fa fa-phone" alt="phone"></i> Tel. 5545219956 | <i class="fa fa-envelope" alt="envelope"></i> ventas@promovite.com.mx</h6>  
-      </div>    
-    </div>
-  </div>
+  <br><br>
   <div class="container">
     <section class="contenido">
       @yield('content')
@@ -105,7 +128,7 @@
   @if($titulo !== 'Bienvenido')
   <div class="barra">
     <div class="text-center">          
-      <h6>&copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/">HAND Creative Design</a>.</h6>
+      <h6>&copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/" target="_blank">HAND Creative Design</a>.</h6>
     </div>
   </div>
   @endif
