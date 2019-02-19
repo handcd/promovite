@@ -14,7 +14,7 @@ class showController extends Controller
    		//encuentra el item al que se le dio click  		
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -31,7 +31,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -47,7 +47,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -62,7 +62,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -77,7 +77,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -92,7 +92,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -107,7 +107,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -122,7 +122,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -137,7 +137,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -152,7 +152,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
@@ -167,7 +167,7 @@ class showController extends Controller
         //encuentra el item al que se le dio click          
         $item = Articulos::find($id);
         //Selecciona los colores para el articulo
-        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->get();
+        $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
         $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');

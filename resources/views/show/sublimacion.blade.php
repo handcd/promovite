@@ -1,16 +1,29 @@
-articulo@extends('show.main')
+@extends('show.main')
 @section('articulo')
 	
 	<div class="jumbotron text-center" style="background-color: white;padding-top: 40px;padding-bottom: 40px;margin-bottom: 0px;">
 	  	<h1 class="display-3 text-center">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
 	  	<div class="col-md-12 zoom">
-			@if( $articulo->catalogo === 'PWD')  
-				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
-			@elseif($articulo->catalogo === 'PMD')
-                <center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'-'.$articulo->color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
-			@else
-				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
-			@endif
+			@switch($articulo->catalogo)
+	  			@case('PWD')
+	  				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+	  				@break
+	  			@case('PMD')
+	  				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'-'.$articulo->color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+	  				@break
+	  			@case('PPF')
+	  				@if($articulo->codigo_color == NULL && $articulo->color == NULL)
+                		<center><img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+                	@else
+                  		<center><img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'-'.$articulo->codigo_color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+                	@endif  
+                	@break
+                @case('PSL')
+                	<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.strtoupper($articulo->color).'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+	  				@break
+                @default
+                	<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style=" max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+			@endswitch
 		</div>
 		<br><br>
 	  	<p class="lead">Colores disponibles.</p>

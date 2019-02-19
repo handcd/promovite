@@ -208,7 +208,7 @@
 					}
 				}
 			}
-		@elseif($articulo->catalogo === 'PPM')
+		@elseif($articulo->catalogo === 'PPM' || $articulo->catalogo === 'PSL')
 			for (var i = 1; i <= counter; i++) {
 				if (eval("color" + i).checked) {
 					if (eval("valueColor" + i) == 'blanco') {				
