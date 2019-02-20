@@ -21,6 +21,9 @@
                 @case('PSL')
                 	<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.strtoupper($articulo->color).'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 	  				@break
+	  			@case('PFP')
+                	<center><img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+	  				@break
                 @default
                 	<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style=" max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 			@endswitch
@@ -68,7 +71,7 @@
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Promoopcion --}}
 		@elseif($articulo->catalogo === 'PPO')
-			<black><p> Precio unitario: $  {{ round((1.11 * $articulo->precio_distribuidor),2) }}</p></black>
+			<black><p> Precio unitario: $  {{ round((1.175 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>

@@ -83,7 +83,7 @@
                     </ul>
                   @elseif($informacion->catalogo === 'PPO')
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.175), 2) }}</li>
+                      <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.11), 2) }}</li>
                     </ul>
                   @else
                     <ul class="list-group list-group-flush">

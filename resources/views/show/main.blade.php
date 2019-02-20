@@ -300,6 +300,96 @@
 					}
 				}
 			}
+		@elseif( $articulo->catalogo === 'PFP' )
+			for (var i = 1; i <= counter; i++) {
+				if (eval("color" + i).checked) {
+					if (eval("valueColor" + i) == 'blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_blanco.jpg') }}");
+					}else if (eval("valueColor" + i) == 'plata') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_plata.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negro') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_negro.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azul') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azul.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_rojo.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verde.jpg') }}");
+					}else if (eval("valueColor" + i) == 'amarillo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_amarillo.jpg') }}");
+					}else if (eval("valueColor" + i) == 'naranja') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_naranja.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulcielo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azulcielo.jpg') }}");
+					}else if (eval("valueColor" + i) == 'morado') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_morado.jpg') }}");
+					}else if (eval("valueColor" + i) == 'lila') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_lila.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rosa') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_rosa.jpg') }}");
+					}else if (eval("valueColor" + i) == 'humo') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_humo.jpg') }}");
+					}else if (eval("valueColor" + i) == 'transparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_transparente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdeclaro') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verdeclaro.jpg') }}");
+					}else if (eval("valueColor" + i) == 'gris') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_gris.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulcobalto') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azulcobalto.jpg') }}");
+					}else if (eval("valueColor" + i) == 'amarillofosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_amarillofosforescente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'naranjafosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_naranjafosforescente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulfosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azulfosforescente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rosafosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_rosafosforescente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdefosforescente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verdefosforescente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'beige') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_beige.jpg') }}");
+					}else if (eval("valueColor" + i) == 'oro') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_oro.jpg') }}");
+					}else if (eval("valueColor" + i) == 'cafe') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_cafe.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulpastel') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azulpastel.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azulmarino') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azulmarino.jpg') }}");
+					}else if (eval("valueColor" + i) == 'vino') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_vino.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojo-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_rojo-blanco.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azul-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azul-blanco.jpg') }}");
+					}else if (eval("valueColor" + i) == 'azul-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_azul-blanco.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negro-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_negro-blanco.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde-blanco') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verde-blanco.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojotransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_rojotransparente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'rojosolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_rojosolido.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negrosolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_negrosolido.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdetransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verdetransparente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'lilatransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_lilatransparente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'lilasolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_lilasolido.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verdesolido') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verdesolido.jpg') }}");
+					}else if (eval("valueColor" + i) == 'negrotransparente') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_negrotransparente.jpg') }}");
+					}else if (eval("valueColor" + i) == 'verde') {				
+						$("#imagen").attr("src", "{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_verde.jpg') }}");
+					}
+				}
+			}	
 		@else
 			for (var i = 1; i <= counter; i++) {
 				if (eval("color" + i).checked) {
