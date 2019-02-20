@@ -30,6 +30,12 @@
 	  	<br>
 	  	@if($articulo->catalogo === 'PMD')
 	  		<p>Único disponible</p>
+	  	@elseif($articulo->catalogo === 'PPF')
+	  		@foreach ($colores as $color)	
+					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="cursor: default;" ></i>
+			@endforeach
+			<br><br>
+			<small>Bolitas únicamente decorativas</small>
 	  	@else
 		  	@foreach ($colores as $color)	
 				<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?= strtolower($color->color) ?>" id="<?= strtolower($color->color) ?>">
@@ -61,7 +67,7 @@
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Promoopcion --}}
 		@elseif($articulo->catalogo === 'PPO')
-			<black><p> Precio unitario: $  {{ round((1.175 * $articulo->precio_distribuidor),2) }}</p></black>
+			<black><p> Precio unitario: $  {{ round((1.11 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>

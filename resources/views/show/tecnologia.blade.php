@@ -2,9 +2,9 @@
 @section('articulo')
 	
 	<div class="jumbotron text-center" style="background-color: white;padding-top: 40px;padding-bottom: 40px;margin-bottom: 0px;">
-	  	<h1 class="display-3 text-center">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
+	  	<h1 class="display-3 ">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
 	  	<div class="col-md-12 zoom">
-			@switch($articulo->catalogo)
+	  		@switch($articulo->catalogo)
 	  			@case('PWD')
 	  				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 	  				@break
@@ -30,6 +30,12 @@
 	  	<br>
 	  	@if($articulo->catalogo === 'PMD')
 	  		<p>Único disponible</p>
+	  	@elseif($articulo->catalogo === 'PPF')
+	  		@foreach ($colores as $color)	
+					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="cursor: default;" ></i>
+			@endforeach
+			<br><br>
+			<small>Bolitas únicamente decorativas</small>
 	  	@else
 		  	@foreach ($colores as $color)	
 				<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?= strtolower($color->color) ?>" id="<?= strtolower($color->color) ?>">

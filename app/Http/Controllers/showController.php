@@ -21,9 +21,7 @@ class showController extends Controller
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
-        })->first();
-        
-        
+        })->first();  
 
         return view('show.escritura',compact('colores', 'articulo'));
     }
@@ -34,7 +32,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -50,7 +48,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+       $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -65,7 +63,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -80,7 +78,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -95,7 +93,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+       $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -110,7 +108,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -125,7 +123,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -140,12 +138,11 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
         })->first();
-        //return $articulo;
         return view('show.hogar',compact('colores', 'articulo'));
     }
     public function showSublimacion($id){ 
@@ -155,7 +152,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');
@@ -170,7 +167,7 @@ class showController extends Controller
         $colores = DB::table('colores')->select(DB::raw('color'))->where('modelo',$item->modelo)->distinct()->get();
         //primer color
         //Obtiene el primer registro y color de cada modelo
-        $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
+       $colors = DB::table('colores')->select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->where('colores.modelo',$item->modelo)->groupBy('modelo');
         //Join para juntar un color, modelo e información
         $articulo = $item->joinSub($colors,'colors',function ($join){
             $join->on('articulos.modelo','=','colors.modelo');

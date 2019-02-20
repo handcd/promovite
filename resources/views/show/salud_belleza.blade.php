@@ -2,9 +2,9 @@
 @section('articulo')
 	
 	<div class="jumbotron text-center" style="background-color: white;padding-top: 40px;padding-bottom: 40px;margin-bottom: 0px;">
-	  	<h1 class="display-3 text-center">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
+	  	<h1 class="display-3 ">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
 	  	<div class="col-md-12 zoom">
-			@switch($articulo->catalogo)
+	  		@switch($articulo->catalogo)
 	  			@case('PWD')
 	  				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 	  				@break
@@ -30,13 +30,19 @@
 	  	<br>
 	  	@if($articulo->catalogo === 'PMD')
 	  		<p>Único disponible</p>
+	  	@elseif($articulo->catalogo === 'PPF')
+	  		@foreach ($colores as $color)	
+					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="cursor: default;" ></i>
+			@endforeach
+			<br><br>
+			<small>Bolitas únicamente decorativas</small>
 	  	@else
 		  	@foreach ($colores as $color)	
 				<label class="radio-inline"><input type="radio" name="optradio" style="display: none;" value="<?= strtolower($color->color) ?>" id="<?= strtolower($color->color) ?>">
 					<i class="fa fa-circle  fa-4x fa-lg <?= strtolower($color->color) ?>" style="padding-bottom: 10px;"></i>
 				</label>									
 			@endforeach
-		@endif	
+		@endif
 	  	<hr class="my-4">
 	  	<p>{{ strtoupper($articulo->descripcion) }}</p>
 	  	<hr class="my-4">
@@ -61,7 +67,7 @@
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Promoopcion --}}
 		@elseif($articulo->catalogo === 'PPO')
-			<black><p> Precio unitario: $  {{ round((1.175 * $articulo->precio_distribuidor),2) }}</p></black>
+			<black><p> Precio unitario: $  {{ round((1.11 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
