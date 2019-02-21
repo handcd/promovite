@@ -92,6 +92,19 @@
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
                   </ul>
+              @elseif($informacion->catalogo === 'PPF')
+                  <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
+                  @if($informacion->codigo_color == NULL && $informacion->color == NULL)
+                    <img src="{{ asset('img/'.$informacion->catalogo.'/'.$informacion->modelo.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
+                  @else
+                    <img src="{{ asset('img/'.$informacion->catalogo.'/'.$informacion->modelo.'-'.$informacion->codigo_color.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
+                  @endif               
+                  <div class="card-body">
+                    <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Consultar el precio con su agente de ventas</li>
+                  </ul>
               @else
                 <h4 class="card-header text-white winideas ">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }} </h4>  
                 <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="max-height: 300px;display: block;">
