@@ -47,6 +47,16 @@
                     <li class="list-group-item">Consultar el precio con su agente de ventas</li>
                   </ul>
                   @break
+                @case('PIN')
+                    <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
+                    <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
+                    <div class="card-body">
+                      <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_distribuidor, 2) }}</li>
+                    </ul>
+                    @break
                 @case('PMD')
                   <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
                   <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'-'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
