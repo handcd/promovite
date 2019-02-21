@@ -1,4 +1,4 @@
-* Winideas */
+/* Winideas */
 
 INSERT INTO `articulos` (`id`, `modelo`, `categoria`, `subcategoria`, `descripcion`, `precio_distribuidor`, `precio_publico`, `largo`, `ancho`, `alto`, `peso`, `catalogo`) VALUES (82, 'A2145', 'Bolsas, maletas y textiles', 'PARAGUAS E IMPERMEABLES', 'Practico poncho impermeable en esfera de plastico con gancho para sujetar tipo llavero, comodo y compacto para emergencias.', 13.8, 14.076, 50, 35, 35, 13, 'PWD');
 INSERT INTO `articulos` (`id`, `modelo`, `categoria`, `subcategoria`, `descripcion`, `precio_distribuidor`, `precio_publico`, `largo`, `ancho`, `alto`, `peso`, `catalogo`) VALUES (83, 'A2146', 'Bolsas, maletas y textiles', 'PARAGUAS E IMPERMEABLES', 'Impermeable de plastico, en bolsa portatil, ligero y comodo para llevar a cualquier lugar.', 11.1, 11.322, 49, 29, 23, 10, 'PWD');
