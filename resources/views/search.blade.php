@@ -83,7 +83,6 @@
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Precio unitario: $  {{ round($informacion->precio_publico,2) }}</li>
                   </ul>
-                  @break
               @else
                 <h4 class="card-header text-white winideas ">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }} </h4>  
                 <img src="{{ asset('img/'.$informacion->categoria.'/'.$informacion->catalogo.'/'.$informacion->modelo.'/'.$informacion->modelo.'_'.$informacion->color.'.jpg') }}" alt="Imagen no disponible" style="max-height: 300px;display: block;">
