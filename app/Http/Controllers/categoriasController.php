@@ -12,7 +12,7 @@ class categoriasController extends Controller
 {
     public function search($search){
         $search = urldecode($search);
-        $colors = Colores::select(DB::raw('modelo, max(color) as color'))->groupBy('modelo');
+        $colors = Colores::select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         $articulo = Articulos::select()
                     ->where('articulos.modelo', 'LIKE', '%'.$search.'%')
                     ->orWhere(DB::raw("CONCAT(articulos.catalogo,'-',articulos.modelo)"), 'like', '%'.$search.'%')
