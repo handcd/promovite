@@ -2,8 +2,8 @@
 @section('articulo')
 	
 	<div class="jumbotron text-center" style="background-color: white;padding-top: 40px;padding-bottom: 40px;margin-bottom: 0px;">
-	  	<h1 class="display-3 ">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
-	  	<div class="col-md-12 zoom">
+	  	<h1 class="display-3 pull-left">Modelo {{ $articulo->catalogo }}-{{ $articulo->modelo }}</h1>
+	  	<div class="col-md-12">
 	  		@switch($articulo->catalogo)
 	  			@case('PWD')
 	  				<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'_lrg.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
@@ -67,7 +67,7 @@
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Promoopcion --}}
 		@elseif($articulo->catalogo === 'PPO')
-			<black><p> Precio unitario: $  {{ round((0.90 * $articulo->precio_distribuidor)*1.11),2) }}</p></black>
+			<black><p> Precio unitario: $  {{ round(((0.90 * $articulo->precio_distribuidor)*1.11),2) }}</p></black>
 		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>
