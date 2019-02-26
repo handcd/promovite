@@ -42,7 +42,7 @@ INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF007', 'rojo solido');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF007', 'verde');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF007', 'verde solido');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF007', 'amarillo');
-INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF008 ', 'azul');
+INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF008', 'azul');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF008', 'blanco');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF008', 'morado');
 INSERT INTO `colores` (`modelo`, `color`) VALUES ('ANF008', 'naranja');

@@ -14,7 +14,7 @@ class categoriasController extends Controller
         $search = urldecode($search);
         $colors = Colores::select(DB::raw('modelo, max(color) as color, min(codigo_color) as codigo_color'))->groupBy('modelo');
         $articulo = Articulos::select()
-                    ->where('articulos.modelo', 'LIKE', '%'.$search.'%')
+                    ->where('articulos.modelo', 'LIKE', '%'.$search.'%')->distinct('modelo')
                     ->orWhere(DB::raw("CONCAT(articulos.catalogo,'-',articulos.modelo)"), 'like', '%'.$search.'%')
                     ->joinSub($colors,'colors',function ($join){
                         $join->on('articulos.modelo','=','colors.modelo');
@@ -22,7 +22,6 @@ class categoriasController extends Controller
                     ->orWhere('articulos.subcategoria', 'LIKE', '%'.$search.'%')
                     ->orWhere('articulos.catalogo','LIKE', '%'.$search.'%')->get();
 
-        
         if (count($articulo) == 0){
             return View('search')
             ->with('message', 'No hay resultados que mostrar :( Inténtalo de nuevo o consulta a tu agente de ventas')

@@ -45,7 +45,7 @@
       margin-bottom: 3rem;
     }
     .fondo{
-      background-image: url(img/fondo4.jpg);
+      background-image: url(/img/fondo4.jpg);
       height: 100%;
       width: 100%;
     }
@@ -72,40 +72,62 @@
         </li>
         <li class="nav-item dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" style="padding-top: 25px;">Categorias</a>
-                <ul class="dropdown-menu" aria-labelledby="themes" style="background-color: white;">
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Escritura y mas') }}" ><i class="far fa-edit"></i>  Escritura</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Oficina') }}"><i class="fa fa-briefcase"></i>  Oficina</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Kids') }}"><i class="fas fa-child"></i>  Kids</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Tecnologia') }}"><i class="fa fa-laptop"></i>  Tecnología</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Llaveros, linternas y herramie') }}"><i class="fa fa-tools"></i>  Llaveros, linternas y herrámientas</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Salud y belleza') }}"><i class="fa fa-briefcase-medical"></i>  Salud y belleza</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Bolsas, maletas y textiles') }}"><i class="fa fa-shopping-bag"></i>  Bolsas, maletas y textiles</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Tazas, termos y cilindros') }}"><i class="fas fa-mug-hot"></i>  Tazas, termos y cilindros</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Hogar y estilo de vida') }}"><i class="fa fa-home"></i>  Hogar y estilo de vida</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Sublimacion') }}"> <i class="fa fa-highlighter"></i>  Sublimación</a>
-                    </li>
-                    <li style="margin-left: 10px; margin-top: 3px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                      <a href="{{ url('/Viaje y recreacion') }}"><i class="fa fa-plane-departure"></i>  Viaje y recreación</a>
-                    </li>
+                <ul class="dropdown-menu" aria-labelledby="themes" style="background-color: white; width: 332px;">
+                    <a href="{{ url('/Escritura y mas') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="far fa-edit" style="margin-right: 15px;"></i> Escritura
+                      </li>
+                    </a>
+                    <a href="{{ url('/Oficina') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-briefcase" style="margin-right: 13px;"></i>  Oficina
+                      </li>
+                    </a>
+                    <a href="{{ url('/Kids') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fas fa-child" style="margin-right: 17px;"></i>  Kids
+                      </li>
+                    </a>
+                    <a href="{{ url('/Tecnologia') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-laptop" style="margin-right: 10px;"></i>  Tecnología
+                      </li>
+                    </a>
+                    <a href="{{ url('/Llaveros, linternas y herramie') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-tools" style="margin-right: 15px;"></i>  Llaveros, linternas y herrámientas
+                      </li>
+                    </a>
+                    <a href="{{ url('/Salud y belleza') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-briefcase-medical" style="margin-right: 15px;"></i>  Salud y belleza
+                      </li>
+                    </a>
+                    <a href="{{ url('/Bolsas, maletas y textiles') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-shopping-bag" style="margin-right: 15px;"></i>  Bolsas, maletas y textiles
+                      </li>
+                    </a>
+                    <a href="{{ url('/Tazas, termos y cilindros') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fas fa-mug-hot" style="margin-right: 15px;"></i>  Tazas, termos y cilindros</a>
+                      </li>
+                    </a>
+                    <a href="{{ url('/Hogar y estilo de vida') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-home" style="margin-right: 15px;"></i>  Hogar y estilo de vida
+                      </li>
+                    </a>
+                    <a href="{{ url('/Sublimacion') }}"> 
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-highlighter" style="margin-right: 15px;"></i>  Sublimación
+                      </li>
+                    </a>
+                    <a href="{{ url('/Viaje y recreacion') }}">
+                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-plane-departure" style="margin-right: 15px;"></i>  Viaje y recreación
+                      </li>
+                    </a>
                 </ul>
         </li>
         <li class="nav-item">

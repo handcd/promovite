@@ -54,7 +54,7 @@
 </style>
 <body>
 	<br>
-	<img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}">
+	<a class="navbar-brand" href="{{ url('/')}}"><img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}"></a>
     @yield('articulo')
     @if($articulo->catalogo != 'PPF')
 	    <div class="col-md-12 text-center">

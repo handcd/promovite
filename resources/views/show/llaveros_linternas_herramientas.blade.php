@@ -46,7 +46,7 @@
 	  	<hr class="my-4">
 	  	<p>{{ strtoupper($articulo->descripcion) }}</p>
 	  	<hr class="my-4">
-	  	<p>Categoría: {{ $articulo->categoria }}</p>
+	  	<p>Categoría: Llaveros linternas y herramiéntas</p>
 	  	<p class="lead">
 	  	<hr class="my-4">
 	  	<p>Subcategoría: {{ $articulo->subcategoria }}</p>
@@ -67,7 +67,7 @@
 			<black><p> Precio unitario: $  {{ round(1.18 * (0.79 * $articulo->precio_distribuidor),2) }}</p></black>
 		{{-- Promoopcion --}}
 		@elseif($articulo->catalogo === 'PPO')
-			<black><p> Precio unitario: $  {{ round((1.175 * $articulo->precio_distribuidor),2) }}</p></black>
+			<black><p> Precio unitario: $  {{ round(((0.90 * $articulo->precio_distribuidor)*1.175),2) }}</p></black>
 		{{-- Otros --}}
 		@else
 			<p>Precio: $ {{ round($articulo->precio_publico, 2) }} </p>

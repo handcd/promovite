@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       @foreach ($kids as $informacion)
-        <div class="col-md-3">
+        <div class="col-md-4">
             <a href="{{ url('/'.$informacion->categoria.'/'.$informacion->id) }}" target="_blank" onclick="window.open(this.href, this.target, 'width = 600, height = 600, top = 50, left = 400'); return false;" class="pull-right">
             <div class="card mb-3">
               @switch($informacion->catalogo)
@@ -93,7 +93,7 @@
                     </ul>
                   @elseif($informacion->catalogo === 'PPO')
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.175), 2) }}</li>
+                      <li class="list-group-item">Precio unitario: ${{ round(((.90*$informacion->precio_distribuidor)*1.175), 2) }}</li>
                     </ul>
                   @else
                     <ul class="list-group list-group-flush">

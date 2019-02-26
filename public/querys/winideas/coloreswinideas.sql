@@ -1339,9 +1339,8 @@ INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1392, 'BPL2034', 'naranj
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1393, 'BPL2034', 'rojo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1395, 'BPL2034', 'negro');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1396, 'BPL2034', 'verde');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1398, 'BPL6962', 'naranja');
+INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1398, 'BPL6962', 'amarillo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1399, 'BPL6962', 'azulcielo');
-INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1400, 'BPL6962', 'verde');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1402, 'BPL7462', 'amarillo');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1403, 'BPL7462', 'azul');
 INSERT INTO `colores` (`id`, `Modelo`, `Color`) VALUES (1404, 'BPL7462', 'rosa');
