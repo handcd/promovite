@@ -37,7 +37,7 @@
       background-color: #eeeeee;
     }
     .winideas {
-      background-color: #00aeef;
+      background-color: #404042;
     }
     .promoopcion {
       background-color: #ffffff;
@@ -57,6 +57,9 @@
       background-image: url(/img/fondo4.jpg);
       height: 100%;
       width: 100%;
+    }
+    .alert-success{
+      background-color:  black !important;
     }
   </style> 
   
@@ -157,7 +160,7 @@
     <section class="contenido">
       @if($titulo !== 'Bienvenido' && $titulo !== 'Búsqueda')  
         <br><br><br><br><br>
-        <div class="alert alert-dismissible alert-success text-center">
+        <div class="alert alert-success text-center">
           <br>
           <h1 class="alert-heading"><strong>Estás en la sección {{$titulo}}</strong></h1>
           <p class="mb-6"></p>
