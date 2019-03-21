@@ -6,16 +6,15 @@
   <br><br>
   @if (isset($message))
     <div class="alert alert-dismissible alert-danger">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>¡Diantres!</strong> {{$message}}
+     <h1 class="alert-heading">¡Diantres! Al parecer lo que buscas no lo tenemos o lo hemos perdido. </h1> {{$message}}
     </div>
   @else
     
     <center>
     <div class="alert alert-dismissible alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <h4 class="alert-heading">¡Hola!</h4>
-      <p class="mb-0">Aquí están los posibles resultados de lo que estás buscando:)</p>
+      <h1 class="alert-heading">Aquí están los posibles resultados de lo que estás buscando:)</h1>
+      <p class="mb-6"></p>
     </div>
     <div class="row">
         @foreach ($articulo as $informacion)          

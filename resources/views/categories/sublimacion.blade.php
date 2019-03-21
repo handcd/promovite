@@ -1,13 +1,7 @@
 @extends('layouts.main')
 @section('content')
-  <br><br><br><br><br>
   <center>
-    <div class="alert alert-dismissible alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <h4 class="alert-heading">¡Hola!</h4>
-      <p class="mb-0">Estás en la sección {{$titulo}}</p>
-    </div>
-       <div class="row">
+      <div class="row">
       @foreach ($sublimacion as $informacion)
         <div class="col-md-4">
             <a href="{{ url('/'.$informacion->categoria.'/'.$informacion->id) }}" target="_blank" onclick="window.open(this.href, this.target, 'width = 600, height = 600, top = 50, left = 400'); return false;" class="pull-right">

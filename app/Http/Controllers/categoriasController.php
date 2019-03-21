@@ -24,7 +24,7 @@ class categoriasController extends Controller
 
         if (count($articulo) == 0){
             return View('search')
-            ->with('message', 'No hay resultados que mostrar :( Inténtalo de nuevo o consulta a tu agente de ventas')
+            ->with('message', 'Inténtalo de nuevo o consulta a tu agente de ventas')
             ->with('search', $search)
             ->with('titulo','Búsqueda');
         } else{

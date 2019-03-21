@@ -1,12 +1,6 @@
 @extends('layouts.main')
 @section('content')
-  <br><br><br><br><br>
   <center>
-    <div class="alert alert-dismissible alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <h4 class="alert-heading">¡Hola!</h4>
-      <p class="mb-0">Estás en la sección {{$titulo}}</p>
-    </div>
     <div class="row">
       @foreach ($bolsas as $informacion)
         <div class="col-md-4">
