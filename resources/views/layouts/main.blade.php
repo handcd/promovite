@@ -17,13 +17,22 @@
     .fa-heart:before {
       color: #ff0000;
     }
+    .fa-facebook-f:before {
+      color: black;
+    }
+    .fa-instagram:before {
+      color: black;
+    }
+    .fa-linkedin:before{
+      color: black;
+    }
     .footer .credits {
       margin-top: 25px;
       padding: 20px 0 15px;
       position: fixed;
       bottom: 0px;
       width: 100%;
-      height: 40px;
+      height: 60px;
       z-index: 200;
       background-color: #eeeeee;
     }
@@ -56,11 +65,14 @@
   <div class="footer">
     <div class="col-md-12 text-center">
       <div class="credits" style="padding: 0px; top: 0px; left: 0px; margin-top: 0px;">
-        <h6 style="margin-top: 8px;"><i class="fa fa-phone-volume" alt="phone"></i> Tel. 5545219956 | <i class="fa fa-envelope" alt="envelope"></i> ventas@promovite.com.mx</h6>  
+        <h6 style="margin-top: 8px;"><i class="fa fa-phone-volume" alt="phone"></i> Tel. 5545219956 | <i class="fa fa-envelope" alt="envelope"></i> ventas@promovite.com.mx</h6> 
+         <a href="https://www.facebook.com/promovite/" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+         <a href="https://www.instagram.com/promovite/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>    
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="top: 40px;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="top: 60px;">
     <a class="navbar-brand" href="{{ url('/')}}"><img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
