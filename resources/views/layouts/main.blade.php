@@ -75,7 +75,7 @@
                 <ul class="dropdown-menu" aria-labelledby="themes" style="background-color: white; width: 332px;">
                     <a href="{{ url('/Escritura y mas') }}">
                       <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                        <i class="far fa-edit" style="margin-right: 15px;"></i> Escritura
+                        <i class="far fa-edit" style="margin-right: 13px;"></i> Escritura
                       </li>
                     </a>
                     <a href="{{ url('/Oficina') }}">
