@@ -156,7 +156,7 @@
   <div class="container">
     <section class="contenido">
       @if($titulo !== 'Bienvenido' && $titulo !== 'Búsqueda')  
-        <br><br><br><br>
+        <br><br><br><br><br>
         <div class="alert alert-dismissible alert-success text-center">
           <br>
           <h1 class="alert-heading"><strong>Estás en la sección {{$titulo}}</strong></h1>
