@@ -12,7 +12,6 @@
     
     <center>
     <div class="alert alert-dismissible alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
       <h1 class="alert-heading">Aquí están los posibles resultados de lo que estás buscando:)</h1>
       <p class="mb-6"></p>
     </div>
