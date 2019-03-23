@@ -6,7 +6,7 @@
   <br><br>
   @if (isset($message))
     <div class="alert alert-dismissible alert-danger">
-     <h1 class="alert-heading">¡Diantres! Al parecer lo que buscas no lo tenemos o lo hemos perdido. </h1> {{$message}}
+     <h1 class="alert-heading">Al parecer lo que buscas no lo tenemos o lo hemos perdido. </h1> {{$message}}
     </div>
   @else
     
