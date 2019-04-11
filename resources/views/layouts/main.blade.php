@@ -89,8 +89,8 @@
           <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" style="padding-top: 25px;">Categorias</a>
                 <ul class="dropdown-menu" aria-labelledby="themes" style="background-color: white; width: 332px;">
                     <a href="{{ url('/Escritura y mas') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                        <i class="far fa-edit" style="margin-right: 13px;"></i> Escritura
+                      <li style="margin-left: 9px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="far fa-edit" style="margin-right: 12px;"></i> Escritura
                       </li>
                     </a>
                     <a href="{{ url('/Oficina') }}">
@@ -99,7 +99,7 @@
                       </li>
                     </a>
                     <a href="{{ url('/Kids') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                      <li style="margin-left: 9px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
                         <i class="fas fa-child" style="margin-right: 17px;"></i>  Kids
                       </li>
                     </a>
@@ -109,12 +109,12 @@
                       </li>
                     </a>
                     <a href="{{ url('/Llaveros, linternas y herramie') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                        <i class="fa fa-tools" style="margin-right: 15px;"></i>  Llaveros, linternas y herrámientas
+                      <li style="margin-left: 8px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-tools" style="margin-right: 15px;"></i>  Llaveros, linternas y herramientas
                       </li>
                     </a>
                     <a href="{{ url('/Salud y belleza') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                      <li style="margin-left: 9px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
                         <i class="fa fa-briefcase-medical" style="margin-right: 15px;"></i>  Salud y belleza
                       </li>
                     </a>
@@ -124,22 +124,22 @@
                       </li>
                     </a>
                     <a href="{{ url('/Tazas, termos y cilindros') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                      <li style="margin-left: 8px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
                         <i class="fas fa-mug-hot" style="margin-right: 15px;"></i>  Tazas, termos y cilindros</a>
                       </li>
                     </a>
                     <a href="{{ url('/Hogar y estilo de vida') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                      <li style="margin-left: 6px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
                         <i class="fa fa-home" style="margin-right: 15px;"></i>  Hogar y estilo de vida
                       </li>
                     </a>
                     <a href="{{ url('/Sublimacion') }}"> 
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
-                        <i class="fa fa-highlighter" style="margin-right: 15px;"></i>  Sublimación
+                      <li style="margin-left: 7px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                        <i class="fa fa-highlighter" style="margin-right: 15px;"></i> Sublimación
                       </li>
                     </a>
                     <a href="{{ url('/Viaje y recreacion') }}">
-                      <li style="margin-left: 10px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                      <li style="margin-left: 5px; margin-top: 5px;" onmouseover="this.style.backgroundColor='#00aeef'" onmouseout="this.style.backgroundColor='#FFFFFF'">
                         <i class="fa fa-plane-departure" style="margin-right: 15px;"></i>  Viaje y recreación
                       </li>
                     </a>
