@@ -53,19 +53,19 @@
       bottom:0;      
       margin-bottom: 3rem;
     }
-    .fondo{
+    /*.fondo{
       background-image: url(/img/fondo4.jpg);
       height: 100%;
       width: 100%;
-    }
+    }*/
     .alert-success{
       background-color:  black !important;
     }
   </style> 
   
 </head>
-<body class="fondo">
-  <div class="footer">
+<body {{--class="fondo"--}}>
+  {{--<div class="footer">
     <div class="col-md-12 text-center">
       <div class="credits" style="padding: 0px; top: 0px; left: 0px; margin-top: 0px;">
         <h6 style="margin-top: 8px;"><i class="fa fa-phone-volume" alt="phone"></i> Tel. 5545219956 | <i class="fa fa-envelope" alt="envelope"></i> ventas@promovite.com.mx</h6> 
@@ -74,8 +74,8 @@
          <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>    
     </div>
-  </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="top: 60px;">
+  </div>--}}
+  {{--<nav class="navbar navbar-expand-lg navbar-light bg-light" style="top: 60px;">
     <a class="navbar-brand" href="{{ url('/')}}"><img style="max-width:100px; margin-top: -10px;" src="{{ url('img/promovite-logo.png') }}"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
@@ -154,30 +154,29 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
       </form>
     </div>
-  </nav>
-  <br><br>
+  </nav>--}}
   <div class="container">
     <section class="contenido">
-      @if($titulo !== 'Bienvenido' && $titulo !== 'Búsqueda')  
+      {{--@if($titulo !== 'Bienvenido' && $titulo !== 'Búsqueda')  
         <br><br><br><br><br>
         <div class="alert alert-success text-center">
           <br>
           <h1 class="alert-heading"><strong>Estás en la sección {{$titulo}}</strong></h1>
           <p class="mb-6"></p>
         </div>
-      @endif
+      @endif--}}
       @yield('content')
     </section>
   </div>
   <br>
-  @if($titulo !== 'Bienvenido')
+  {{--@if($titulo !== 'Bienvenido')
   <div class="barra">
     <div class="text-center">          
       <h6>&copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart heart" alt="love"></i> Por <a href="http://handcd.com/" target="_blank">HAND Creative Design</a>.</h6>
     </div>
   </div>
   @endif
-</body>
+</body>--}}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
