@@ -165,6 +165,11 @@
           <p class="mb-6"></p>
         </div>
       @endif--}}
+          <form class="form-inline my-lg-4 text-center" role="search" action="{{ url('/searchredirect') }}" style="align-items: center";>
+            <input class="form-control mr-sm-2" type="text" placeholder="Ingresa un modelo" name="search" id="search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+
       @yield('content')
     </section>
   </div>
