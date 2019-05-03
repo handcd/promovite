@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ url('img/promovite-icon.png') }}" />
-  <link rel="icon" type="image/png" href="{{ url('img/promovite-icon.png') }}" />
+  {{--<link rel="apple-touch-icon" sizes="76x76" href="{{ url('img/promovite-icon.png') }}" />
+  <link rel="icon" type="image/png" href="{{ url('img/promovite-icon.png') }}" />--}}
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
-  <title>Promovite | {{ $titulo }} </title>
+  {{--<title>Promovite | {{ $titulo }} </title>--}}
   <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   {{-- Search console --}}
