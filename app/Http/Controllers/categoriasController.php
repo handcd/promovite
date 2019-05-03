@@ -35,6 +35,9 @@ class categoriasController extends Controller
             ->with('titulo','Búsqueda');
         }
     }
+    public function searchView(){
+        return view('searchView');
+    }
     //Nosotros
     public function Nosotros(){
         //Título de la página
