@@ -58,7 +58,7 @@
                     <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
+                    <li class="list-group-item">Precio unitario: ${{ round(1.10 * $informacion->precio_distribuidor, 2) }}</li>
                   </ul>
                   @break
                 @case('PIN')

@@ -59,6 +59,9 @@
 		{{-- Promofactory --}}
 		@elseif($articulo->catalogo === 'PPF')
 			<black><p>Consultar el precio con su agente de ventas </p></black>
+		{{-- For promotional--}}
+		@elseif($articulo->catalogo === 'PFP')
+			<black><p> Precio: ${{ round(($articulo->precio_distribuidor*1.10), 2) }}</p></black>
 		{{-- CDO --}}
 		@elseif($articulo->catalogo === 'PCD')
 			<black><p> Precio: ${{ round(($articulo->precio_distribuidor*1.13), 2) }}</p></black>

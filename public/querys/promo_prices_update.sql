@@ -1196,7 +1196,7 @@ UPDATE articulos SET precio_distribuidor = 131.77 WHERE modelo = 'CAP 060';
 UPDATE articulos SET precio_distribuidor = 137.54 WHERE modelo = 'SPO 007';
 UPDATE articulos SET precio_distribuidor = 109.88 WHERE modelo = 'TAZ 033';
 UPDATE articulos SET precio_distribuidor = 63.32 WHERE modelo = 'SPO 008';
-UPDATE articulos SET precio_distribuidor = 1032.88 WHERE modelo = 'SIN 905 ';
+UPDATE articulos SET precio_distribuidor = 1032.88 WHERE modelo = 'SIN 905';
 UPDATE articulos SET precio_distribuidor = 6.66 WHERE modelo = 'CEL 037';
 UPDATE articulos SET precio_distribuidor = 97.29 WHERE modelo = 'USB 331';
 UPDATE articulos SET precio_distribuidor = 38.43 WHERE modelo = 'SPO 003';
