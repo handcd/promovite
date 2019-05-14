@@ -20,6 +20,18 @@
                 @case('PSL')
                 	<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.strtoupper($articulo->color).'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 	  				@break
+	  			 @case('PCS')
+                	<center><img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->categoria.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style="max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
+	  				@break
+                @case('PFP')
+                  <h4 class="card-header text-white winideas">Modelo <br>{{ $articulo->catalogo }}-{{ $articulo->modelo }}</h4>  
+                  <img src="{{ asset('img/'.$articulo->catalogo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Imagen no disponible" style="display: block;  max-height: 300px">
+                  <div class="card-body">
+                    <p class="card-text"> {{strtoupper($articulo->descripcion) }}</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Precio unitario: ${{ round($articulo->precio_publico, 2) }}</li>
+                  </ul>
                 @default
                 	<center><img src="{{ asset('img/'.$articulo->categoria.'/'.$articulo->catalogo.'/'.$articulo->modelo.'/'.$articulo->modelo.'_'.$articulo->color.'.jpg') }}" alt="Card image" style=" max-height: 300px; display: block;" class="zoom" id="imagen" /></center>
 			@endswitch
