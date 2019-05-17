@@ -27,7 +27,7 @@
                   <p class="card-text"> {{$informacion->descripcion }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round((1.18 * (0.79 * $informacion->precio_distribuidor)),2) }}</li>
+                  <li class="list-group-item">Precio unitario: ${{ number_format(round((1.18 * (0.79 * $informacion->precio_distribuidor)),3),2) }}</li>
                 </ul>
               @elseif($informacion->catalogo === 'PMD')
                 <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -36,7 +36,7 @@
                   <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
+                  <li class="list-group-item">Precio unitario: ${{ number_format(round($informacion->precio_publico, 3),2) }}</li>
                 </ul>
               @elseif($informacion->catalogo === 'PPM' || $informacion->catalogo === 'PIN')
                 <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -45,7 +45,7 @@
                   <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.15), 2) }} </li>
+                  <li class="list-group-item">Precio unitario: ${{ number_format(round(($informacion->precio_distribuidor*1.15), 3),2) }} </li>
                 </ul>
               @elseif($informacion->catalogo === 'PPO')
                 <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -55,11 +55,11 @@
                 </div>
                 @if($informacion->categoria === 'Tecnologia')
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio unitario: ${{ round((0.90*$informacion->precio_distribuidor*1.11), 2) }} </li>
+                    <li class="list-group-item">Precio unitario: ${{ number_format(round((0.90*$informacion->precio_distribuidor*1.11), 3),2) }} </li>
                   </ul>
                 @else
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio unitario: ${{ round((0.90*$informacion->precio_distribuidor*1.175), 2) }} </li>
+                    <li class="list-group-item">Precio unitario: ${{ number_format(round((0.90*$informacion->precio_distribuidor*1.175), 3),2) }} </li>
                   </ul>
                 @endif
               @elseif($informacion->catalogo === 'PCD')
@@ -70,7 +70,7 @@
                   <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round(($informacion->precio_distribuidor*1.13), 2) }} </li>
+                  <li class="list-group-item">Precio unitario: ${{ number_format(round(($informacion->precio_distribuidor*1.13), 3),2) }} </li>
                 </ul>
               @elseif($informacion->catalogo === 'PSL')
                   <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -79,7 +79,7 @@
                     <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio unitario: $  {{ round($informacion->precio_publico,2) }}</li>
+                    <li class="list-group-item">Precio unitario: $  {{ number_format(round($informacion->precio_publico,3),2) }}</li>
                   </ul>
               @elseif($informacion->catalogo === 'PFP')
                   <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -88,7 +88,7 @@
                     <p class="card-text"> {{strtoupper($informacion->descripcion) }}</p>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio unitario: ${{ round(1.10 * $informacion->precio_distribuidor, 2) }}</li>
+                    <li class="list-group-item">Precio unitario: ${{ number_format(round(1.10 * $informacion->precio_distribuidor, 3),2) }}</li>
                   </ul>
               @elseif($informacion->catalogo === 'PPF')
                   <h4 class="card-header text-white winideas">Modelo <br>{{ $informacion->catalogo }}-{{ $informacion->modelo }}</h4>  
@@ -110,7 +110,7 @@
                   <p class="card-text"> {{$informacion->descripcion }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Precio unitario: ${{ round($informacion->precio_publico, 2) }}</li>
+                  <li class="list-group-item">Precio unitario: ${{ number_format(round($informacion->precio_publico, 3),2) }}</li>
                 </ul>
               @endif
             </div>   

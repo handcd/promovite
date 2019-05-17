@@ -84,20 +84,22 @@
 	    total = (total == null || total == undefined || total == "" || total !== 0) ? 0 : total;
 		
 	    /* Esta es la suma. */
-	    @if ($articulo->catalogo === 'PPM' || $articulo->catalogo === 'PIN') 
-	    	total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.15)?>;
+	    @if ($articulo->catalogo === 'PPM') 
+	    	total = (parseInt(total) + parseInt(valor))* <?=number_format(round(1.15 * ($articulo->precio_distribuidor),3),2)?>;  	
+	    @elseif ($articulo->catalogo === 'PIN')
+	    	total = (parseInt(total) + parseInt(valor))* <?=number_format(round(1.15 * (0.80 * $articulo->precio_distribuidor),3),2)?>;  	
 	    @elseif ($articulo->catalogo === 'PCD') 
-	    	total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.13)?>;
+	    	total = (parseInt(total) + parseInt(valor))* <?=number_format(round(1.13 * ($articulo->precio_distribuidor),3),2)?>;  	
 	    @elseif ($articulo->catalogo === 'PWD') 
-	    	total = (parseInt(total) + parseInt(valor))* <?=(/*1.18 * (0.79 * */($articulo->precio_distribuidor))?>;
+	    	total = (parseInt(total) + parseInt(valor))* <?=number_format(round(1.18 * (0.79 * $articulo->precio_distribuidor),3),2)?>;
 	    @elseif ($articulo->catalogo === 'PPO') 
 	    	@if ($articulo->categoria === 'Tecnologia') 
-	    		total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor*1.11)?>;
+	    		total = (parseInt(total) + parseInt(valor))* <?=number_format(round(1.11 * ($articulo->precio_distribuidor),3),2)?>;  	
 	    	@else
-	    		total = (parseInt(total) + parseInt(valor))* <?=($articulo->precio_distribuidor)?>;
+	    		total = (parseInt(total) + parseInt(valor))* <?=number_format(round(1.175 * ($articulo->precio_distribuidor),3),2)?>;  	
 	    	@endif
 	    @else
-	    	total = (parseInt(total) + parseInt(valor))* <?=$articulo->precio_publico?>;
+	    	total = (parseInt(total) + parseInt(valor))* <?=number_format(round(($articulo->precio_publico),3),2)?>;  	
 	    @endif
 		var costo = total.toFixed(2);
 	    // Colocar el resultado de la suma en el control "span".
