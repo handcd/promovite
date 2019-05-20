@@ -19,9 +19,9 @@ class categoriasController extends Controller
                     ->joinSub($colors,'colors',function ($join){
                         $join->on('articulos.modelo','=','colors.modelo');
                     })
+                    ->orWhere('articulos.catalogo','LIKE', '%'.$search.'%')
                     ->orWhere('articulos.descripcion','LIKE', '%'.$search.'%')
-                    ->orWhere('articulos.subcategoria', 'LIKE', '%'.$search.'%')
-                    ->orWhere('articulos.catalogo','LIKE', '%'.$search.'%')->get();
+                    ->orWhere('articulos.subcategoria', 'LIKE', '%'.$search.'%')->get();
 
         if (count($articulo) == 0){
             return View('search')
